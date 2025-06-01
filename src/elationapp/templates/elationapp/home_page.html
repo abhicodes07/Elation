@@ -1,0 +1,239 @@
+{% extends 'elationapp/layout.html' %}
+{% load static %}
+{% block title %}
+  {{ block.super }} - Home
+{% endblock %}
+
+{% block content %}
+  <!--  -->
+  <section class="text-center px-5 py-5 grid grid-cols-1 gap-6">
+    <div class="grid grid-cols-1 gap-2">
+      <h1 class="text-4xl md:text-[66px] tracking-wide playfair-display-regular text-[#094C9F]">The Best Online Platform for Mental Health</h1>
+
+      <div class="xl:mx-32 xl:my-4 hidden xl:inline-flex text-center poppins-medium sh-color xl:justify-between">
+        {% for sub_list in home_sub_headings %}
+        <div class="flex justify-center items-center gap-1">
+          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.7502 8.75005C14.2502 11.25 12.3652 13.604 9.72023 14.13C8.43022 14.387 7.09204 14.2303 5.89623 13.6824C4.70042 13.1346 3.70794 12.2234 3.06012 11.0786C2.41229 9.93389 2.14214 8.61394 2.28813 7.30672C2.43413 5.99951 2.98882 4.77167 3.87322 3.79805C5.68722 1.80005 8.75022 1.25005 11.2502 2.25005" stroke="#3E3E3E" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6.25 7.75L8.75 10.25L14.75 3.75" stroke="#3E3E3E" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span>{{ sub_list }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Here comes the image cards -->
+    <div class="flex flex-wrap justify-center sh-color gap-6 md:p-0 p-4">
+      <!-- Teenagers 13–17 -->
+      <div class="card transition duration-700 hover:scale-105 ease-in-out cursor-pointer flex w-screen h-[58px] md:block md:w-[208px] md:h-[266px] rounded-2xl bg-[#D88D9533] poppins-regular md:text-center md:p-3 overflow-hidden" data-color="#F6E7E9">
+        <img src="{% static 'assets/teenagers_1.jpg' %}" alt="Teenagers 13–17" class="w-[58px] h-[58px] md:w-auto md:h-auto transform md:scale-100 transition-all duration-300 md:transform-none rounded-[16px] mb-4" />
+        <div class="flex-1 py-2 md:py-0 md:block md:mb-4 text-center">
+          <h3 class="text-base md:text-[18px]">Teenagers</h3>
+          <p class="text-[12px] md:text-sm">Therapy for 13–17</p>
+        </div>
+      </div>
+
+      <!-- Couples -->
+      <div class="card transition duration-700 hover:scale-105 ease-in-out cursor-pointer flex w-screen h-[58px] md:block md:w-[208px] md:h-[266px] rounded-2xl bg-[#F5EAD2] poppins-regular md:text-center md:p-3 overflow-hidden" data-color="#FDF1D9">
+        <img src="{% static 'assets/couples.jpg' %}" alt="Couples" class="w-[58px] h-[58px] md:w-auto md:h-auto object-cover transform md:scale-100 transition-all duration-300 md:transform-none rounded-[16px] mb-4" />
+        <div class="flex-1 py-2 md:py-0 md:block md:mb-4 text-center">
+          <h3 class="text-base md:text-[18px]">Couples</h3>
+          <p class="text-[12px] md:text-sm">Therapy for us</p>
+        </div>
+      </div>
+
+      <!-- Teenagers 18+ -->
+      <div class="card transition duration-700 hover:scale-105 ease-in-out cursor-pointer flex w-screen h-[58px] md:block md:w-[208px] md:h-[266px] rounded-2xl bg-[#D3ECF3] poppins-regular md:text-center md:p-3 overflow-hidden" data-color="#DAF3FA">
+        <img src="{% static 'assets/teenagers_2.jpg' %}" alt="Teenagers 18+" class="w-[58px] h-[58px] md:w-auto md:h-auto object-cover transform md:scale-100 transition-all duration-300 md:transform-none rounded-[16px] mb-4" />
+        <div class="flex-1 py-2 md:py-0 md:block md:mb-4 text-center">
+          <h3 class="text-base md:text-[18px]">Teenagers</h3>
+          <p class="text-[12px] md:text-sm">Therapy for 18+</p>
+        </div>
+      </div>
+
+      <!-- Elderly -->
+      <div class="card transition duration-700 hover:scale-105 ease-in-out cursor-pointer flex w-screen h-[58px] md:block md:w-[208px] md:h-[266px] rounded-2xl bg-[#DAE9D2] poppins-regular md:text-center md:p-3 overflow-hidden" data-color="#E1F0DA">
+        <div class="w-[58px] h-[58px] bg-[#6DB848] rounded-[16px] md:mb-4 md:w-[184px] md:h-[184px] md:mr-9 overflow-hidden items-center">
+          <img src="{% static 'assets/elder.png' %}" alt="elderly" class="pt-3 scale-170 md:pt-12 md:transform md:scale-125 z-0" />
+        </div>
+        <div class="flex-1 py-2 md:py-0 md:block md:mb-4 text-center">
+          <h3 class="text-base md:text-[18px]">Elderly</h3>
+          <p class="text-[12px] md:text-sm">Therapy for 50+</p>
+        </div>
+      </div>
+
+      <!-- LGBTQ+ -->
+      <div class="card transition duration-700 hover:scale-105 ease-in-out cursor-pointer flex w-screen h-[58px] md:block md:w-[208px] md:h-[266px] rounded-2xl bg-[#DADBE2] poppins-regular md:text-center md:p-3 overflow-hidden" data-color="#E1E2E9">
+        <div class="h-[58px] w-[58px] bg-[#6F7496] rounded-[16px] md:mb-4 md:w-[184px] md:h-[184px] md:mr-9 overflow-hidden">
+          <img src="{% static 'assets/lgbtq.png' %}" alt="elderly" class="pt-3 scale-200 md:pt-12 md:transform md:scale-158" />
+        </div>
+        <div class="flex-1 py-2 md:py-0 md:block md:mb-4 text-center">
+          <h3 class="text-base md:text-[18px]">LGBTQ+</h3>
+          <p class="text-[12px] md:text-sm">Therapy for LGBTQ+</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  -->
+  <div class="flex flex-col items-center px-5 md:pt-7 pt-2 md:pb-0 pb-4">
+    <a href="#" class="cursor-pointer poppins-regular sh-color bg-transparent border border-gray-300 focus:ring-1 focus:outline-none focus:ring-gray-300 rounded-lg text-xs md:text-sm lg:w-md px-5 py-2.5 text-center">Find the therapist who truly understands you</a>
+  </div>
+
+  <div class="flex flex-col items-center w-full md:bg-transparent bg-[#E9F3FF] p-5">
+    <a href="#" id="fr-cnslt-btn" class="max-w-sm w-full">
+      <button type="button" class="w-full cursor-pointer flex justify-center items-center gap-2 px-4 py-2.5 rounded-lg bg-[#094C9F] hover:bg-[#063a78] text-white text-sm md:text-base poppins-medium shadow-md shadow-blue-200 hover:shadow-lg transition duration-300 ease-in-out">
+        Get Free Consultation<svg width="26" height="17" viewBox="0 0 30 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M28.083 3.78149C27.1335 3.27149 25.9815 3.32549 25.0815 3.92249L20.5665 6.92249C20.2665 3.26699 17.2305 0.375 13.5 0.375H7.5C3.5715 0.375 0.375 3.5715 0.375 7.5V13.5C0.375 17.4285 3.5715 20.625 7.5 20.625H13.5C17.2305 20.625 20.2665 17.733 20.5665 14.0775L25.0815 17.079C25.572 17.403 26.1345 17.5681 26.7 17.5681C27.174 17.5681 27.6495 17.4525 28.083 17.22C29.034 16.71 29.625 15.7214 29.625 14.6429V6.35852C29.625 5.27852 29.034 4.29149 28.083 3.78149ZM18.375 13.5015C18.375 16.1895 16.188 18.3765 13.5 18.3765H7.5C4.812 18.3765 2.625 16.1895 2.625 13.5015V7.50146C2.625 4.81346 4.812 2.62646 7.5 2.62646H13.5C16.188 2.62646 18.375 4.81346 18.375 7.50146V13.5015ZM27.375 14.6429C27.375 15.0074 27.126 15.1799 27.0195 15.2369C26.9115 15.2954 26.6325 15.4049 26.3265 15.2054L20.625 11.4164V9.58502L26.3265 5.79602C26.6325 5.59352 26.913 5.70588 27.0195 5.76288C27.126 5.81988 27.375 5.99256 27.375 6.35706V14.6429Z" fill="#FEFEFE" />
+        </svg>
+      </button>
+    </a>
+  </div>
+
+  <!--  -->
+  <section id="fade-box" class="grid grid-cols-1 gap-2 px-5 py-7 items-center text-center">
+    <span class="poppins-regular font-medium text-[#667085]">Internationally certified specialists from</span>
+    <div class="logo w-full overflow-hidden cursor-pointer my-1">
+      <div class="flex whitespace-nowrap w-max">
+        <div class="logo-slide flex w-max">
+          {% for logo in company_logos %}
+            <img src="{% static 'assets/associates/' %}{{ logo }}.png" alt="{{ logo }}-logo" class="md:w-44 md:h-16 w-40 h-16 inline-block" />
+          {% endfor %}
+        </div>
+        <div class="logo-slide flex w-max">
+          {% for logo in company_logos %}
+            <img src="{% static 'assets/associates/' %}{{ logo }}.png" alt="{{ logo }}-logo" class="lg:w-44 lg:h-16 w-40 h-16 inline-block" />
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  -->
+  <div id="fade-box" class="opacity-0 transition-opacitity duration-1000 w-full text-center bg-[#E9F3FF] md:rounded-[225px] rounded-[130px] lg:my-20 my-10">
+    <section class="grid grid-cols-1 gap-12 py-16 md:px-20 px-12">
+      <div class="grid grid-cols-1 items-center gap-3 w-full justify-center">
+        <h2 class="poppins-regular sm:text-4xl text-2xl text-[#3E3E3E] tracking-wide">Why choose Elation Mind Health?</h2>
+        <p class="poppins-regular sh-color md:text-sm text-xs">Guidance, encouragement, and expert care at every step of your journey</p>
+      </div>
+      <div class="relative w-full max-w-5xl mx-auto md:px-0 px-4">
+        <span class="absolute tracking-widest whitespace-nowrap poppins-regular px-2 sm:px-3 sm:text-base text-sm bg-[#E9F3FF] -top-2.5 left-1/2 -translate-x-1/2 text-[#094C9F]">OUR IMPACT</span>
+        <div class="border-2 p-6 border-[#3C81D6] rounded-4xl">
+          <div class="grid sm:grid-cols-3 grid-cols-1 text-center poppins-regular sm:gap-16 gap-12">
+            <div class="flex flex-col items-center">
+              <h3 class="text-[#094C9F] text-4xl poppins-medium mb-2">91%</h3>
+              <p class="text-md leading-snug sh-color">
+                of our members feel <span class="poppins-semibold">truly satisfied</span> and happy.
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <h3 class="text-[#094C9F] text-4xl poppins-medium mb-2">71%</h3>
+              <p class="text-md leading-snug sh-color">
+                Our members experience noticeable improvement <span class="poppins-semibold">within 9 weeks.</span>
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <h3 class="text-[#094C9F] text-4xl poppins-medium mb-2">83%</h3>
+              <p class="text-md leading-snug sh-color">
+                of our customers are <span class="poppins-semibold">happy to recommend</span> us to their loved ones.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:grid lg:grid-cols-2 flex flex-wrap gap-10 mx-auto w-full">
+        <div class="rounded-4xl bg-white p-6 sm:pb-14 grid grid-cols-1 gap-8 shadow-xl shadow-[#63636326] w-full">
+          <div class="md:text-left text-center">
+            <h3 class="poppins-medium text-[#101828] text-[22px]">Tailored for everyone</h3>
+            <p class="text-[#667085] poppins-regular">No matter where you are in life, our therapy plans are designed to meet your unique needs—offering the right support, at the right time, just for you</p>
+          </div>
+          <section class="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0 grid grid-cols-1 gap-4 px-6 text-left">
+            <div class="transition duration-700 hover:scale-105 ease-in-out cursor-pointer rounded-2xl bg-[#CEEFEC] px-4 py-4">
+              <img src="{% static 'assets/icons/emerald.png' %}" alt="emerald" class="pb-2 scale-90" />
+              <div class="pl-2">
+                <h4 class="poppins-medium text-[#101828]">Emerald</h4>
+                <p class="poppins-regular text-[#667085]">Therapists with 2-3 years of hands-on experience.</p>
+              </div>
+            </div>
+            <div class="transition duration-700 hover:scale-105 ease-in-out cursor-pointer rounded-2xl bg-[#FF525236]/60 px-4 py-4">
+              <img src="{% static 'assets/icons/ruby.png' %}" alt="ruby" class="pb-2 scale-90" />
+              <div class="pl-2">
+                <h4 class="poppins-medium text-[#101828]">Ruby</h4>
+                <p class="poppins-regular text-[#667085]">Therapists with 3-5 years of hands-on experience.</p>
+              </div>
+            </div>
+            <div class="transition duration-700 hover:scale-105 ease-in-out cursor-pointer rounded-2xl bg-[#F3F5FF] px-4 py-4">
+              <img src="{% static 'assets/icons/diamond.png' %}" alt="diamond" class="pb-2 scale-90" />
+              <div class="pl-2">
+                <h4 class="poppins-medium text-[#101828]">Diamond</h4>
+                <p class="poppins-regular text-[#667085]">Therapists with 8-10 years of hands-on experience.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="rounded-4xl bg-white p-6 grid md:grid-cols-1 shadow-xl shadow-[#63636326] w-full gap-8">
+          <div class="md:text-left text-center">
+            <h3 class="poppins-medium text-[#101828] text-[22px]">Beyond Ordinary Care</h3>
+            <p class="text-[#667085] poppins-regular">How we are redefining mental health support</p>
+          </div>
+          <div class="sm:grid sm:grid-cols-2 sm:gap-4 grid grid-cols-1 gap-4 text-left">
+            <div class="text-[#667085] poppins-regular p-4">
+              <ul class="space-y-3 text-sm">
+                {% for features in feature_list %}
+                  <li class="flex gap-2 items-start">
+                    <div class="w-[22px] min-w-[22px] h-[23px]">
+                      <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2106 6.24831C18.5197 6.58932 18.4938 7.11632 18.1528 7.4254L8.54749 16.1313C8.20648 16.4404 7.67947 16.4145 7.3704 16.0735L3.41315 11.7074C3.10407 11.3664 3.12996 10.8394 3.47097 10.5304C3.81198 10.2213 4.33898 10.2472 4.64806 10.5882L8.04566 14.3367L17.0335 6.19049C17.3745 5.88141 17.9015 5.9073 18.2106 6.24831Z" fill="#009688" />
+                      </svg>
+                    </div>
+                    <span>{{ features }}</span>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="w-full bg-white rounded-xl shadow-md">
+              <div class="flex items-end gap-2 justify-center p-6 pb-0 h-full poppins-medium">
+                <!-- Bar 1 -->
+                <div class="flex flex-col items-center">
+                  <div class="text-[#73B2FF] text-sm">In-office</div>
+                  <div class="w-24 h-24 bg-[#79C1BA] rounded-t-[20px]"></div>
+                </div>
+                <!-- Bar 2 -->
+                <div class="flex flex-col items-center w-20">
+                  <div class="text-[#3A60C4] text-sm text-center">Vagus Mind Health</div>
+                  <div class="w-24 h-44 bg-[#73B2FF] rounded-t-[20px]"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="inline-flex justify-center w-full p-5">
+        <a href="#" id="fr-cnslt-btn">
+          <button type="button" class="w-full cursor-pointer flex justify-center items-center gap-2 px-4 py-2.5 rounded-lg bg-[#094C9F] hover:bg-[#063a78] text-white text-sm md:text-base poppins-medium shadow-md shadow-blue-200 hover:shadow-lg transition duration-300 ease-in-out">
+            Find a therapist
+          </button>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!---->
+  <div class="w-full">
+    <section class="flex flex-col items-center">
+      <div class="text-center">
+        <h1 class="poppins-regular sh-color sm:text-4xl text-xl sm:w-sm">
+          Reason to keep us dedicated
+        </h1>
+        <span class="poppins-regular text-[#3E3E3E]/80 sm:text-base text-xs">
+          Not just reviews, the stories of impact
+        </span>
+      </div>
+    </section>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script src="static/javascript/script.js"></script>
+{% endblock %}
