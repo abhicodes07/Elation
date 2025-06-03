@@ -81,3 +81,41 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 fade_boxes.forEach(box => observer.observe(box));
+
+// fade in and move up
+const fade_elements = document.querySelectorAll('.fade-in');
+const new_observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('opacity-100');
+      entry.target.classList.remove('opacity-0');
+      entry.target.classList.remove('translate-y-5');
+      entry.target.classList.add('translate-y-0');
+      // Unobserve if you only want it to animate once
+      // new_observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.3
+});
+
+fade_elements.forEach(el => new_observer.observe(el));
+
+// fade left and move up
+const fade_left = document.querySelectorAll('.fade-left');
+const left_observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('opacity-100');
+      entry.target.classList.remove('opacity-0');
+      entry.target.classList.remove('translate-x-5');
+      entry.target.classList.add('translate-x-0');
+      // Unobserve if you only want it to animate once
+      // new_observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.3
+});
+
+fade_left.forEach(el => left_observer.observe(el));

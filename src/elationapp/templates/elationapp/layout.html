@@ -13,6 +13,7 @@
     {% endblock %}
   </title>
   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous">
   {% tailwind_css %}
 </head>
 
@@ -21,7 +22,7 @@
   <div class="md:px-5 px-3 py-3 flex flex-col w-full fixed z-30 items-center">
     <div class="w-full rounded-lg">
       <nav
-        class="poppins-regular rounded-lg w-full text-black bg-gray-300/60 backdrop-blur-sm transition-colors duration-500 ease-in-out"
+        class="poppins-regular rounded-lg w-full text-black bg-gray-300/50 backdrop-blur-sm transition-colors duration-500 ease-in-out"
         id="nav-bar">
         <div class="px-4 py-4 flex items-center justify-between">
           <!-- Logo -->
@@ -254,7 +255,7 @@
 
   <!-- SCRIPTS -->
   {% block scripts %}
-
+    <script src="{% static 'javascript/script.js' %}"></script>
   {% endblock %}
 </body>
 

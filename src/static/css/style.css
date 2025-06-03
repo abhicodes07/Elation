@@ -78,3 +78,35 @@
 #content {
   background-color: rgba(0, 0, 0, 0);
 }
+
+:root {
+  --scroll-speed: 30s;
+}
+
+@keyframes scroll-left {
+  from  { transform: translateX(0%); }
+  to { transform: translateX(-100%); }
+}
+
+/* Slow on mobile */
+@media (max-width: 768px) {
+  :root {
+    --scroll-speed: 45s;
+  }
+}
+
+/* Fast on desktop */
+@media (min-width: 769px) {
+  :root {
+    --scroll-speed: 20s;
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left var(--scroll-speed) linear infinite;
+}
+
+
+.scroll-wrapper:hover .animate-scroll-left {
+  animation-play-state: paused;
+}
