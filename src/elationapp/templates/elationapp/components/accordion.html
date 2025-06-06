@@ -1,0 +1,71 @@
+{% load static %}
+
+{% block scripts %}
+<!-- Alpine.js CDN (required) -->
+<script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+{% endblock %}
+
+{% block content %}
+<section class="max-w-5xl mx-auto my-10 px-4">
+  <h2 class="text-2xl font-semibold mb-4 p-3 poppins-medium">
+    Frequently Asked Questions
+  </h2>
+
+  <div class="space-y-5 p-4 rounded-md poppins-regular">
+    <!-- Accordion Item -->
+    <div x-data="{ open: false }" class="bg-blue-50 rounded-md overflow-hidden">
+      <button @click="open = !open"
+              class="cursor-pointer w-full text-left px-4 py-3 flex justify-between items-center font-medium">
+        <span>Are my therapy sessions confidential?</span>
+        <svg :class="{ 'rotate-180': open }" class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div x-show="open" x-collapse class="px-4 pb-4 text-sm text-gray-700">
+        Yes, your sessions are strictly confidential and protected under client-therapist privacy standards.
+      </div>
+    </div>
+
+    <!-- Repeat Accordion Items -->
+    <div x-data="{ open: false }" class="bg-blue-50 rounded-md overflow-hidden">
+      <button @click="open = !open"
+              class="cursor-pointer w-full text-left px-4 py-3 flex justify-between items-center font-medium">
+        <span>Is online therapy effective?</span>
+        <svg :class="{ 'rotate-180': open }" class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div x-show="open" x-collapse class="px-4 pb-4 text-sm text-gray-700">
+        Yes, studies show online therapy can be just as effective as in-person sessions.
+      </div>
+    </div>
+
+    <div x-data="{ open: false }" class="bg-blue-50 rounded-md overflow-hidden">
+      <button @click="open = !open"
+              class="cursor-pointer w-full text-left px-4 py-3 flex justify-between items-center font-medium">
+        <span>Can I switch my therapist if I’m not satisfied?</span>
+        <svg :class="{ 'rotate-180': open }" class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div x-show="open" x-collapse class="px-4 pb-4 text-sm text-gray-700">
+        Absolutely. You can request a new match at any point during your journey.
+      </div>
+    </div>
+
+    <div x-data="{ open: false }" class="bg-blue-50 rounded-md overflow-hidden">
+      <button @click="open = !open"
+              class="cursor-pointer w-full text-left px-4 py-3 flex justify-between items-center font-medium">
+        <span>Do I need a diagnosis to start therapy?</span>
+        <svg :class="{ 'rotate-180': open }" class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div x-show="open" x-collapse class="px-4 pb-4 text-sm text-gray-700">
+        Not at all. Therapy is for anyone seeking support, no diagnosis required.
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

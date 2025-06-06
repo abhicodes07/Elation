@@ -1,0 +1,115 @@
+{% load static %}
+
+{% block content %}
+  <section class="grid grid-cols-1 md:px-24 px-16 py-7 md:my-16 my-10 gap-10">
+    <div class="flex justify-center items-center">
+      <h1 class="poppins-medium sh-color text-center text-3xl md:w-xl w-auto">Check In on Your Mental Health for Free!</h1>
+    </div>
+    <div class="hidden lg:flex gap-18 justify-center items-start w-full sm:px-80">
+      <div class="flex items-start gap-3 max-w-48">
+        <svg width="70" height="70" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.5 7.25C4.5 6.65326 4.73705 6.08097 5.15901 5.65901C5.58097 5.23705 6.15326 5 6.75 5C7.34674 5 7.91903 5.23705 8.34099 5.65901C8.76295 6.08097 9 6.65326 9 7.25C9 7.84674 8.76295 8.41903 8.34099 8.84099C7.91903 9.26295 7.34674 9.5 6.75 9.5C6.15326 9.5 5.58097 9.26295 5.15901 8.84099C4.73705 8.41903 4.5 7.84674 4.5 7.25ZM6.75 4C5.88805 4 5.0614 4.34241 4.4519 4.9519C3.84241 5.5614 3.5 6.38805 3.5 7.25C3.5 8.11195 3.84241 8.9386 4.4519 9.5481C5.0614 10.1576 5.88805 10.5 6.75 10.5C7.61195 10.5 8.4386 10.1576 9.0481 9.5481C9.65759 8.9386 10 8.11195 10 7.25C10 6.38805 9.65759 5.5614 9.0481 4.9519C8.4386 4.34241 7.61195 4 6.75 4ZM12.437 15.645C12.975 15.865 13.652 16 14.5 16C16.381 16 17.421 15.332 17.969 14.566C18.2555 14.1644 18.4348 13.6963 18.49 13.206C18.4949 13.1605 18.4982 13.1148 18.5 13.069V13C18.5 12.803 18.4612 12.608 18.3858 12.426C18.3104 12.244 18.1999 12.0786 18.0607 11.9393C17.9214 11.8001 17.756 11.6896 17.574 11.6142C17.392 11.5388 17.197 11.5 17 11.5H12.37C12.61 11.79 12.79 12.129 12.895 12.5H17C17.1326 12.5 17.2598 12.5527 17.3536 12.6464C17.4473 12.7402 17.5 12.8674 17.5 13V13.054L17.495 13.104C17.4575 13.4213 17.3405 13.7239 17.155 13.984C16.828 14.443 16.118 15 14.5 15C13.768 15 13.222 14.886 12.813 14.719C12.731 14.999 12.612 15.315 12.437 15.645ZM1.5 13.5C1.5 12.9696 1.71071 12.4609 2.08579 12.0858C2.46086 11.7107 2.96957 11.5 3.5 11.5H10C10.5304 11.5 11.0391 11.7107 11.4142 12.0858C11.7893 12.4609 12 12.9696 12 13.5V13.584L11.998 13.624L11.988 13.759C11.9171 14.4071 11.6869 15.0275 11.318 15.565C10.617 16.58 9.263 17.5 6.75 17.5C4.237 17.5 2.883 16.58 2.182 15.566C1.8129 15.0282 1.58271 14.4074 1.512 13.759C1.5063 13.7008 1.50229 13.6424 1.5 13.584V13.5ZM2.5 13.56V13.578L2.507 13.661C2.56126 14.1404 2.73226 14.5991 3.005 14.997C3.492 15.701 4.513 16.5 6.75 16.5C8.987 16.5 10.008 15.701 10.495 14.997C10.7677 14.5991 10.9387 14.1404 10.993 13.661C10.997 13.623 10.999 13.5953 10.999 13.578L11 13.561V13.5C11 13.2348 10.8946 12.9804 10.7071 12.7929C10.5196 12.6054 10.2652 12.5 10 12.5H3.5C3.23478 12.5 2.98043 12.6054 2.79289 12.7929C2.60536 12.9804 2.5 13.2348 2.5 13.5V13.56ZM13 8C13 7.60218 13.158 7.22064 13.4393 6.93934C13.7206 6.65804 14.1022 6.5 14.5 6.5C14.8978 6.5 15.2794 6.65804 15.5607 6.93934C15.842 7.22064 16 7.60218 16 8C16 8.39782 15.842 8.77936 15.5607 9.06066C15.2794 9.34196 14.8978 9.5 14.5 9.5C14.1022 9.5 13.7206 9.34196 13.4393 9.06066C13.158 8.77936 13 8.39782 13 8ZM14.5 5.5C13.837 5.5 13.2011 5.76339 12.7322 6.23223C12.2634 6.70107 12 7.33696 12 8C12 8.66304 12.2634 9.29893 12.7322 9.76777C13.2011 10.2366 13.837 10.5 14.5 10.5C15.163 10.5 15.7989 10.2366 16.2678 9.76777C16.7366 9.29893 17 8.66304 17 8C17 7.33696 16.7366 6.70107 16.2678 6.23223C15.7989 5.76339 15.163 5.5 14.5 5.5Z" fill="#3E3E3E" />
+        </svg>
+        <p class="poppins-regular text-sm leading-snug">Receive expert feedback to guide your well-being.</p>
+      </div>
+      <div class="flex items-start gap-3 max-w-48">
+        <svg width="72" height="72" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_17_110)">
+            <path d="M3.62012 9.898C3.62012 8.873 3.62012 8.36 3.82312 7.97C3.99384 7.64155 4.26167 7.37372 4.59012 7.203C4.98012 7 5.49312 7 6.51812 7H17.7221C18.7471 7 19.2601 7 19.6501 7.203C19.9786 7.37372 20.2464 7.64155 20.4171 7.97C20.6201 8.36 20.6201 8.873 20.6201 9.898V16.102C20.6201 17.127 20.6201 17.64 20.4171 18.03C20.2464 18.3585 19.9786 18.6263 19.6501 18.797C19.2601 19 18.7471 19 17.7221 19H6.51812C5.49312 19 4.98012 19 4.59012 18.797C4.26167 18.6263 3.99384 18.3585 3.82312 18.03C3.62012 17.64 3.62012 17.127 3.62012 16.102V9.898Z" stroke="#3E3E3E" />
+            <path d="M3.62012 11H20.6201" stroke="#3E3E3E" stroke-linecap="round" />
+            <path d="M6.62012 16.5C6.89626 16.5 7.12012 16.2761 7.12012 16C7.12012 15.7239 6.89626 15.5 6.62012 15.5C6.34397 15.5 6.12012 15.7239 6.12012 16C6.12012 16.2761 6.34397 16.5 6.62012 16.5Z" fill="#3E3E3E" />
+            <line x1="-0.971448" y1="23.1591" x2="28.3596" y2="0.984292" stroke="#3E3E3E" stroke-width="0.6" />
+          </g>
+          <defs>
+            <clipPath id="clip0_17_110">
+              <rect width="24" height="24" fill="white" transform="translate(0.120117 0.5)" />
+            </clipPath>
+          </defs>
+        </svg>
+        <p class="poppins-regular text-sm leading-snug">Your resuts, 100% free. No payment, just your peace of mind</p>
+      </div>
+      <div class="flex items-start gap-3 max-w-48">
+        <svg width="70" height="70" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.71 14H12.71V8H11.71V14ZM14.71 12.5H15.71V9H14.71V12.5ZM8.70996 12H9.70996V9H8.70996V12ZM7.20996 21.5V17.738C6.25996 16.8713 5.52263 15.8973 4.99796 14.816C4.47329 13.7347 4.21063 12.6247 4.20996 11.486C4.20996 9.268 4.98763 7.38233 6.54296 5.829C8.09829 4.27567 9.98729 3.49933 12.21 3.5C14.0113 3.5 15.6393 4.04833 17.094 5.145C18.5486 6.24167 19.492 7.65833 19.924 9.395L20.96 13.498C21.0266 13.7513 20.9793 13.982 20.818 14.19C20.6566 14.3967 20.4413 14.5 20.172 14.5H18.21V17.885C18.21 18.329 18.0516 18.709 17.735 19.025C17.4183 19.341 17.0383 19.4993 16.595 19.5H14.21V21.5H13.21V18.5H16.595C16.7743 18.5 16.9216 18.4423 17.037 18.327C17.1523 18.2117 17.21 18.0643 17.21 17.885V13.5H19.91L18.96 9.625C18.5766 8.09567 17.7533 6.859 16.49 5.915C15.2286 4.97167 13.802 4.5 12.21 4.5C10.2766 4.5 8.62663 5.17667 7.25996 6.53C5.89329 7.88467 5.20996 9.53133 5.20996 11.47C5.20996 12.466 5.41429 13.4127 5.82296 14.31C6.23096 15.2073 6.80996 16.0047 7.55996 16.702L8.20996 17.3V21.5H7.20996Z" fill="#3E3E3E" />
+        </svg>
+        <p class="poppins-regular text-sm leading-snug">Understand your mental well-being and pattern</p>
+      </div>
+    </div>
+
+    {% comment %}Cards{% endcomment %}
+    <div class="lg:grid lg:grid-cols-3 lg:gap-24 grid grid-cols-1 gap-16">
+      <div class="bg-[#E9F3FF] rounded-xl p-8 space-y-3">
+        <div class="flex justify-center">
+          <img src="{% static 'assets/icons/brain.png' %}" alt="stress" class="w-18 h-19" />
+        </div>
+        <p class="poppins-regular text-md text-center">Stress</p>
+        <div class="grid grid-cols-1 gap-1 justify-center">
+          <div class="flex justify-center items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+              <path d="M7 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM14.5 9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5ZM1.615 16.428a1.224 1.224 0 0 1-.569-1.175 6.002 6.002 0 0 1 11.908 0c.058.467-.172.92-.57 1.174A9.953 9.953 0 0 1 7 18a9.953 9.953 0 0 1-5.385-1.572ZM14.5 16h-.106c.07-.297.088-.611.048-.933a7.47 7.47 0 0 0-1.588-3.755 4.502 4.502 0 0 1 5.874 2.636.818.818 0 0 1-.36.98A7.465 7.465 0 0 1 14.5 16Z" />
+            </svg>
+            <span class="text-xs poppins-regular text-[#3E3E3E]/60 text-start">305 people took the test</span>
+          </div>
+          <div class="flex justify-center items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+            <span class="poppins-regular text-[#3E3E3E]/60 text-xs text-start">5 min</span>
+          </div>
+        </div>
+        <div class="md:flex md:justify-between md:gap-0 grid justify-center gap-2 w-full place-items-center">
+          <a href="#" id="fr-cnslt-btn"><button type="button" class="w-full cursor-pointer flex justify-center items-center gap-2 px-4 py-2.5 rounded-xl bg-[#094C9F] hover:bg-[#063a78] text-white text-sm md:text-base poppins-medium shadow-md shadow-blue-200 hover:shadow-lg transition duration-300 ease-in-out">Take a test</button></a>
+          <a href="#" class="poppins-medium text-[#3E3E3E]/60 hover:text-[#094C9F]">Know More</a>
+        </div>
+      </div>
+      <div class="bg-[#E9F3FF] rounded-xl p-8 space-y-3">
+        <div class="flex justify-center">
+          <img src="{% static 'assets/icons/anxiety.png' %}" alt="anxiety" class="w-18 h-19" />
+        </div>
+        <p class="poppins-regular text-md text-center">Anxiety</p>
+        <div class="grid grid-cols-1 gap-1 justify-center">
+          <div class="flex justify-center items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+              <path d="M7 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM14.5 9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5ZM1.615 16.428a1.224 1.224 0 0 1-.569-1.175 6.002 6.002 0 0 1 11.908 0c.058.467-.172.92-.57 1.174A9.953 9.953 0 0 1 7 18a9.953 9.953 0 0 1-5.385-1.572ZM14.5 16h-.106c.07-.297.088-.611.048-.933a7.47 7.47 0 0 0-1.588-3.755 4.502 4.502 0 0 1 5.874 2.636.818.818 0 0 1-.36.98A7.465 7.465 0 0 1 14.5 16Z" />
+            </svg>
+            <span class="text-xs poppins-regular text-[#3E3E3E]/60 text-start">45 people took the test</span>
+          </div>
+          <div class="flex justify-center items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+            <span class="poppins-regular text-[#3E3E3E]/60 text-xs text-start">5 min</span>
+          </div>
+        </div>
+        <div class="md:flex md:justify-between md:gap-0 grid gap-2 justify-center w-full place-items-center">
+          <a href="#" id="fr-cnslt-btn"><button type="button" class="w-full cursor-pointer flex justify-center items-center gap-2 px-4 py-2.5 rounded-xl bg-[#094C9F] hover:bg-[#063a78] text-white text-sm md:text-base poppins-medium shadow-md shadow-blue-200 hover:shadow-lg transition duration-300 ease-in-out">Take a test</button></a>
+          <a href="#" class="poppins-medium text-[#3E3E3E]/60 hover:text-[#094C9F]">Know More</a>
+        </div>
+      </div>
+      <div class="bg-[#E9F3FF] rounded-xl p-8 space-y-3">
+        <div class="flex justify-center">
+          <img src="{% static 'assets/icons/sleep.png' %}" alt="sleep" class="w-18 h-19" />
+        </div>
+        <p class="poppins-regular text-md text-center">Sleep Deprived</p>
+        <div class="grid grid-cols-1 gap-1 justify-center">
+          <div class="flex justify-center items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+              <path d="M7 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM14.5 9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5ZM1.615 16.428a1.224 1.224 0 0 1-.569-1.175 6.002 6.002 0 0 1 11.908 0c.058.467-.172.92-.57 1.174A9.953 9.953 0 0 1 7 18a9.953 9.953 0 0 1-5.385-1.572ZM14.5 16h-.106c.07-.297.088-.611.048-.933a7.47 7.47 0 0 0-1.588-3.755 4.502 4.502 0 0 1 5.874 2.636.818.818 0 0 1-.36.98A7.465 7.465 0 0 1 14.5 16Z" />
+            </svg>
+            <span class="text-xs poppins-regular text-[#3E3E3E]/60 text-start">45 people took the test</span>
+          </div>
+          <div class="flex justify-center items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+            <span class="poppins-regular text-[#3E3E3E]/60 text-xs text-start">5 min</span>
+          </div>
+        </div>
+        <div class="md:flex md:justify-between md:gap-0 grid gap-2 justify-center w-full place-items-center">
+          <a href="#" id="fr-cnslt-btn"><button type="button" class="w-full cursor-pointer flex justify-center items-center gap-2 px-4 py-2.5 rounded-xl bg-[#094C9F] hover:bg-[#063a78] text-white text-sm md:text-base poppins-medium shadow-md shadow-blue-200 hover:shadow-lg transition duration-300 ease-in-out">Take a test</button></a>
+          <a href="#" class="poppins-medium text-[#3E3E3E]/60 hover:text-[#094C9F]">Know More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
