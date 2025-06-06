@@ -54,9 +54,7 @@
 
       <!-- Elderly -->
       <div class="card transition duration-700 hover:scale-105 ease-in-out cursor-pointer flex w-screen h-[58px] md:block md:w-[208px] md:h-[266px] rounded-2xl bg-[#6DB848]/20 poppins-regular md:text-center md:p-3 overflow-hidden" data-color="#E1F0DA">
-        <div class="w-[58px] h-[58px] bg-[#6DB848] rounded-[16px] md:mb-4 md:w-[184px] md:h-[184px] md:mr-9 overflow-hidden items-center">
-          <img src="{% static 'assets/elder.png' %}" alt="elderly" class="pt-3 scale-170 md:pt-12 md:transform md:scale-125 z-0" />
-        </div>
+        <img src="{% static 'assets/elderly.jpg' %}" alt="Elderly" class="w-[58px] h-[58px] md:w-auto md:h-auto object-cover transform md:scale-100 transition-all duration-300 md:transform-none rounded-[16px] mb-4" />
         <div class="flex-1 py-2 md:py-0 md:block md:mb-4 text-center">
           <h3 class="text-base md:text-[18px]">Elderly</h3>
           <p class="text-[12px] md:text-sm">Therapy for 50+</p>
@@ -65,9 +63,7 @@
 
       <!-- LGBTQ+ -->
       <div class="card transition duration-700 hover:scale-105 ease-in-out cursor-pointer flex w-screen h-[58px] md:block md:w-[208px] md:h-[266px] rounded-2xl bg-[#6F7496]/20 poppins-regular md:text-center md:p-3 overflow-hidden" data-color="#E1E2E9">
-        <div class="h-[58px] w-[58px] bg-[#6F7496] rounded-[16px] md:mb-4 md:w-[184px] md:h-[184px] md:mr-9 overflow-hidden">
-          <img src="{% static 'assets/lgbtq.png' %}" alt="elderly" class="pt-3 scale-200 md:pt-12 md:transform md:scale-158" />
-        </div>
+        <img src="{% static 'assets/lgbtq.jpg' %}" alt="LGBTQ+" class="w-[58px] h-[58px] md:w-auto md:h-auto object-cover transform md:scale-100 transition-all duration-300 md:transform-none rounded-[16px] mb-4" />
         <div class="flex-1 py-2 md:py-0 md:block md:mb-4 text-center">
           <h3 class="text-base md:text-[18px]">LGBTQ+</h3>
           <p class="text-[12px] md:text-sm">Therapy for LGBTQ+</p>
@@ -95,13 +91,11 @@
   <section id="fade-box" class="grid grid-cols-1 gap-2 px-5 py-7 items-center text-center">
     <span class="poppins-regular font-medium text-[#667085]">Internationally certified specialists from</span>
     <div class="w-full overflow-hidden cursor-pointer my-1">
-      <div class="logo flex whitespace-nowrap w-max">
-        <div class="logo-slide flex w-max">
+      <div class="logo inline-flex w-full">
+        <div class="logo-slide flex whitespace-nowrap w-max">
           {% for logo in company_logos %}
             <img src="{% static 'assets/associates/' %}{{ logo }}.png" alt="{{ logo }}-logo" class="md:w-44 md:h-16 w-40 h-16 inline-block" />
           {% endfor %}
-        </div>
-        <div class="logo-slide flex w-max">
           {% for logo in company_logos %}
             <img src="{% static 'assets/associates/' %}{{ logo }}.png" alt="{{ logo }}-logo" class="lg:w-44 lg:h-16 w-40 h-16 inline-block" />
           {% endfor %}
@@ -111,8 +105,8 @@
   </section>
 
   <!--  -->
-  <div id="fade-box" class="opacity-0 transition-opacitity duration-1000 w-full text-center bg-[#E9F3FF] md:rounded-[235px] rounded-[130px] lg:my-16 my-10">
-    <section class="grid grid-cols-1 gap-12 py-16 md:px-20 px-8">
+  <section id="fade-box" class="opacity-0 transition-opacitity duration-1000 w-full text-center bg-[#E9F3FF] md:rounded-[235px] rounded-[130px] lg:my-16 my-10">
+    <div class="grid grid-cols-1 gap-12 py-16 md:px-20 px-8">
       <div class="grid grid-cols-1 items-center gap-3 w-full justify-center">
         <h2 class="poppins-regular sm:text-4xl text-2xl text-[#3E3E3E] tracking-wide">Why choose Elation Mind Health?</h2>
         <p class="poppins-regular sh-color md:text-sm text-xs">Guidance, encouragement, and expert care at every step of your journey</p>
@@ -128,7 +122,7 @@
               </p>
             </div>
             <div class="flex flex-col items-center">
-              <h3 class="text-[#094C9F] text-4xl poppins-medium mb-2">71%</h3>
+              <h3 class="text-[#094C9F] text-4xl poppins-medium mb-2">78%</h3>
               <p class="text-md leading-snug sh-color">
                 Our members experience noticeable improvement <span class="poppins-semibold">within 9 weeks.</span>
               </p>
@@ -143,7 +137,7 @@
         </div>
       </div>
       <div class="lg:grid lg:grid-cols-2 flex flex-wrap gap-10 mx-auto w-full">
-        <div class="rounded-4xl bg-white p-6 sm:pb-14 grid grid-cols-1 gap-8 shadow-xl shadow-[#63636326] w-full opacity-0 transition-opacity duration-1000 translate-y-5 fade-in">
+        <div class="lg:order-first order-last rounded-4xl bg-white p-6 sm:pb-14 grid grid-cols-1 gap-8 shadow-xl shadow-[#63636326] w-full opacity-0 transition-opacity duration-1000 translate-y-5 fade-in">
           <div class="md:text-left text-center">
             <h3 class="poppins-medium text-[#101828] text-[22px]">Tailored for everyone</h3>
             <p class="text-[#667085] poppins-regular">No matter where you are in life, our therapy plans are designed to meet your unique needs—offering the right support, at the right time, just for you</p>
@@ -172,7 +166,7 @@
             </div>
           </section>
         </div>
-        <div class="rounded-4xl bg-white p-6 grid md:grid-cols-1 shadow-xl shadow-[#63636326] w-full gap-8 opacity-0 transition-opacity duration-1000 translate-y-5 fade-in">
+        <div class="lg:order-last order-first rounded-4xl bg-white p-6 grid md:grid-cols-1 shadow-xl shadow-[#63636326] w-full gap-8 opacity-0 transition-opacity duration-1000 translate-y-5 fade-in">
           <div class="md:text-left text-center">
             <h3 class="poppins-medium text-[#101828] text-[22px]">Beyond Ordinary Care</h3>
             <p class="text-[#667085] poppins-regular">How we are redefining mental health support</p>
@@ -212,21 +206,21 @@
       <div class="inline-flex justify-center w-full p-5">
         <a href="#" id="fr-cnslt-btn"><button type="button" class="w-full cursor-pointer flex justify-center items-center gap-2 px-4 py-2.5 rounded-lg bg-[#094C9F] hover:bg-[#063a78] text-white text-sm md:text-base poppins-medium shadow-md shadow-blue-200 hover:shadow-lg transition duration-300 ease-in-out">Find a therapist</button></a>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 
   <!--  -->
-  <div class="w-full overflow-hidden bg-white lg:my-16 my-10">
-    <section class="flex flex-col gap-4 items-center px-5 py-7">
+  <div class="bg-white lg:my-16 my-10">
+    <section class="flex flex-col gap-4 items-center py-7">
       <div class="text-center opacity-0 transition-opacity duration-1000 translate-y-5 fade-in">
         <h1 class="poppins-regular sh-color sm:text-4xl text-2xl sm:w-sm">Reasons to keep us dedicated</h1>
         <span class="poppins-regular text-[#3E3E3E]/80 sm:text-base text-xs">Not just reviews, the stories of impact</span>
       </div>
-      <div class="scroll-wrapper w-max py-7 bg-white inline-flex gap-6">
-        <div id="review-cards" class="w-max inline-flex gap-6">
+      <div class="w-full py-7 overflow-x-auto bg-white inline-flex snap-x snap-mandatory custom-scroll">
+        <div class="w-max inline-flex gap-6 px-12">
           {% for detail in reviews %}
             {% with user=detail.0 image=detail.1 profession=detail.2 review=detail.3 %}
-              <div id="review-cards" class="transition duration-1000 translate-x-5 opacity-0 fade-left ease-in-out hover:scale-105 cursor-pointer tracking-wide rounded-2xl md:max-w-md max-w-72 max-h-60 bg-white grid grid-cols-1 gap-5 shadow-xl shadow-gray-400/50 p-4">
+              <div id="review-cards" class="scroll-ml-6 snap-center shrink-0 snap-normal transition duration-1000 translate-x-5 opacity-0 fade-left ease-in-out hover:scale-105 cursor-pointer tracking-wide rounded-2xl md:max-w-md max-w-72 max-h-60 bg-white grid grid-cols-1 gap-5 shadow-lg shadow-gray-400/60 p-4">
                 <div class="flex gap-2">
                   <i class="fa-solid fa-star text-yellow-400"></i>
                   <i class="fa-solid fa-star text-yellow-400"></i>
@@ -253,78 +247,29 @@
   </div>
 
   <!--  -->
-  <div class="bg-white md:px-28 px-16 py-7 w-full lg:my-16 my-10 md:rounded-b-[220px] rounded-b-[130px]">
-    <section class="flex flex-col sm:gap-16 gap-10 items-center">
-      <div class="text-center opacity-0 transition-opacity duration-1000 translate-y-5 fade-in">
-        <h1 class="text-[#101828] sm:text-4xl text-2xl poppins-regular">How we work</h1>
-        <p class="text-[#3E3E3E]/80 poppins-regular sm:text-base text-xs">Personalized care that connects you with the right therapist for a healthier, happier you.</p>
+  {% include 'elationapp/components/how_we_work_section.html' %}
+
+  <!--  -->
+  <section class="md:grid md:grid-cols-2 md:gap-16 grid grid-cols-1 gap-6 justify-center w-full bg-[#E9F3FF] px-10 sm:py-30 py-16">
+    <div class="grid grid-cols-3 gap-6">
+      <div class="text-center space-y-2">
+        <h3 class="lg:text-6xl text-3xl text-[#094C9F] playfair-display-regular text-center">2000+</h3>
+        <span class="lg:text-md text-sm text-[#3E3E3E]/60 poppins-medium">Clients helped</span>
       </div>
-      <div class="sm:grid sm:grid-cols-2 grid grid-cols-1 place-items-center w-auto md:gap-32 gap-6">
-        <div class="bg-white transition duration-1000 translate-x-5 opacity-0 fade-left p-4 w-72 shadow-xl ease-in-out hover:scale-105 cursor-pointer shadow-gray-400/50 rounded-3xl">
-          <div class="w-full relative">
-            <div class="w-full relative p-2">
-              <svg width="45" height="170" viewBox="0 0 45 170" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.79492 1.46777V143.928C1.79492 157.612 12.8874 168.703 26.5707 168.703H43.9137" stroke="url(#paint0_linear_116_3802)" stroke-width="1.65171" stroke-linecap="round" />
-                <defs>
-                  <linearGradient id="paint0_linear_116_3802" x1="22.8543" y1="1.46777" x2="61.6696" y2="191.828" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#2B8AFE" />
-                    <stop offset="1" stop-color="#01433D" stop-opacity="0" />
-                  </linearGradient>
-                </defs>
-              </svg>
-              <svg width="45" height="73" class="absolute top-12" viewBox="0 0 45 73" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.79492 1.46777V55.5618C1.79492 64.6838 9.18998 72.0783 18.3121 72.0783H43.9137" stroke="url(#paint0_linear_116_3803)" stroke-width="1.65171" stroke-linecap="round" />
-                <defs>
-                  <linearGradient id="paint0_linear_116_3803" x1="43.5007" y1="33.6762" x2="87.248" y2="115.511" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#1EB4FF" stop-opacity="0.6" />
-                    <stop offset="1" stop-opacity="0" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            <div class="flex absolute top-0 gap-0.5 shadow items-center rounded-full bg-[#70B0FF]/30 w-auto p-1 pr-1.5">
-              <span class="w-3 h-3 rounded-full bg-[#094C9F] inline-block"></span>
-              <span class="poppins-medium text-[#094C9F]/90 text-[7px] text-center">Your Preferrences</span>
-            </div>
-            <div class="flex shadow absolute top-8 gap-0.5 items-center rounded-full bg-[#70B0FF]/30 w-auto p-1 pr-1.5">
-              <span class="w-3 h-3 rounded-full bg-[#094C9F] inline-block"></span>
-              <span class="p-1 bg-gradient-to-r from-[#A39AFF] to-[#009688]/0 w-12 rounded-full"></span>
-            </div>
-            <div class="flex bottom-[58.5px] left-12 absolute shadow z-10 items-center rounded-full bg-[#EBF6F5]/30 w-auto p-1 pr-1.5">
-              <span class="p-1 bg-gradient-to-r from-[#9BF4EC] to-[#009688]/0 w-16 rounded-full"></span>
-            </div>
-            <div class="flex absolute justify-center items-center left-9 bottom-0">
-              <div class="flex shadow items-center rounded-full bg-[#70B0FF]/30 w-auto p-2 pr-1.5">
-                <span class="p-1 bg-gradient-to-r from-[#A39AFF] to-[#009688]/0 w-12 rounded-full"></span>
-              </div>
-              <svg width="20" height="2" viewBox="0 0 20 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path opacity="0.2" d="M0.530273 1.29053H18.699" stroke="#094C9F" stroke-width="0.825857" stroke-linecap="round" stroke-dasharray="2.48 2.48" />
-              </svg>
-              <img src="{% static 'assets/icons/bolt-circle-svgrepo-com.svg' %}" alt="icon" class="h-6 w-6" />
-            </div>
-          </div>
-          <div class="flex relative left-15">
-            <svg width="70" height="47" viewBox="0 0 70 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path opacity="0.3"
-                d="M3.55298 45.9806C3.71425 46.1413 3.97566 46.1413 4.13694 45.9806L6.76485 43.3527C6.9264 43.1912 6.9264 42.9296 6.76485 42.768C6.6033 42.6074 6.3417 42.6074 6.18107 42.768L3.84496 45.1041L1.50911 42.768C1.34784 42.6074 1.08643 42.6074 0.925154 42.768C0.763881 42.9296 0.763881 43.1912 0.925154 43.3527L3.55298 45.9806ZM69.5007 0.67916C69.5007 0.450606 69.3153 0.266113 69.0876 0.266113C68.86 0.266113 68.6746 0.450606 68.6746 0.67916H69.5007ZM4.25791 44.4147C4.25791 44.1871 4.07305 44.0017 3.84496 44.0017C3.61695 44.0017 3.43209 44.1871 3.43209 44.4147H4.25791ZM3.43209 41.8685C3.43209 42.0971 3.61695 42.2815 3.84496 42.2815C4.07305 42.2815 4.25791 42.0971 4.25791 41.8685H3.43209ZM4.25791 39.3223C4.25791 39.0946 4.07305 38.9092 3.84496 38.9092C3.61695 38.9092 3.43209 39.0946 3.43209 39.3223H4.25791ZM3.43209 36.7761C3.43209 37.0037 3.61695 37.1891 3.84496 37.1891C4.07305 37.1891 4.25791 37.0037 4.25791 36.7761H3.43209ZM4.25791 34.2298C4.25791 34.0013 4.07305 33.8168 3.84496 33.8168C3.61695 33.8168 3.43209 34.0013 3.43209 34.2298H4.25791ZM3.43209 31.6827C3.43209 31.9112 3.61695 32.0957 3.84496 32.0957C4.07305 32.0957 4.25791 31.9112 4.25791 31.6827H3.43209ZM4.30684 29.1447C4.32455 28.9171 4.15456 28.7188 3.92711 28.7014C3.69975 28.683 3.50112 28.8538 3.48349 29.0805L4.30684 29.1447ZM3.89627 26.4562C3.84321 26.6783 3.97998 26.9005 4.20174 26.9537C4.4236 27.0069 4.64637 26.8702 4.69942 26.6481L3.89627 26.4562ZM5.47981 24.245C5.56701 24.0348 5.46696 23.7934 5.25676 23.7062C5.04565 23.6181 4.80424 23.7182 4.71686 23.9293L5.47981 24.245ZM5.92498 21.563C5.80566 21.7566 5.86624 22.0109 6.06083 22.1302C6.25542 22.2496 6.50968 22.189 6.629 21.9944L5.92498 21.563ZM8.11598 19.9511C8.26376 19.7777 8.24357 19.517 8.07009 19.3692C7.89661 19.2205 7.63685 19.2407 7.48815 19.4142L8.11598 19.9511ZM9.36706 17.5362C9.19358 17.684 9.17248 17.9447 9.32117 18.1181C9.46895 18.2916 9.72963 18.3118 9.90311 18.164L9.36706 17.5362ZM11.9473 16.6761C12.1409 16.5568 12.2024 16.3026 12.0831 16.1089C11.9638 15.9143 11.7095 15.8537 11.5149 15.973L11.9473 16.6761ZM13.8812 14.7642C13.671 14.8523 13.571 15.0937 13.6582 15.3039C13.7454 15.515 13.9868 15.615 14.1979 15.5278L13.8812 14.7642ZM16.6009 14.7476C16.8222 14.6944 16.9589 14.4714 16.9066 14.2492C16.8534 14.028 16.6303 13.8913 16.4082 13.9436L16.6009 14.7476ZM19.0333 13.5314C18.8057 13.5489 18.6359 13.7471 18.6533 13.9748C18.6708 14.2024 18.87 14.3722 19.0967 14.3548L19.0333 13.5314ZM21.6301 14.3052C21.8586 14.3052 22.0431 14.1207 22.0431 13.8931C22.0431 13.6645 21.8586 13.48 21.6301 13.48V14.3052ZM24.1671 13.48C23.9385 13.48 23.7541 13.6645 23.7541 13.8931C23.7541 14.1207 23.9385 14.3052 24.1671 14.3052V13.48ZM26.7032 14.3052C26.9318 14.3052 27.1163 14.1207 27.1163 13.8931C27.1163 13.6645 26.9318 13.48 26.7032 13.48V14.3052ZM29.2403 13.48C29.0117 13.48 28.8272 13.6645 28.8272 13.8931C28.8272 14.1207 29.0117 14.3052 29.2403 14.3052V13.48ZM31.7764 14.3052C32.0049 14.3052 32.1894 14.1207 32.1894 13.8931C32.1894 13.6645 32.0049 13.48 31.7764 13.48V14.3052ZM34.3134 13.48C34.0849 13.48 33.9004 13.6645 33.9004 13.8931C33.9004 14.1207 34.0849 14.3052 34.3134 14.3052V13.48ZM36.8496 14.3052C37.0781 14.3052 37.2626 14.1207 37.2626 13.8931C37.2626 13.6645 37.0781 13.48 36.8496 13.48V14.3052ZM39.3866 13.48C39.1581 13.48 38.9736 13.6645 38.9736 13.8931C38.9736 14.1207 39.1581 14.3052 39.3866 14.3052V13.48ZM41.9227 14.3052C42.1513 14.3052 42.3358 14.1207 42.3358 13.8931C42.3358 13.6645 42.1513 13.48 41.9227 13.48V14.3052ZM44.4598 13.48C44.2312 13.48 44.0467 13.6645 44.0467 13.8931C44.0467 14.1207 44.2312 14.3052 44.4598 14.3052V13.48ZM46.9959 14.3052C47.2245 14.3052 47.409 14.1207 47.409 13.8931C47.409 13.6645 47.2245 13.48 46.9959 13.48V14.3052ZM49.5329 13.48C49.3044 13.48 49.1199 13.6645 49.1199 13.8931C49.1199 14.1207 49.3044 14.3052 49.5329 14.3052V13.48ZM52.0691 14.3052C52.2976 14.3052 52.4821 14.1207 52.4821 13.8931C52.4821 13.6645 52.2976 13.48 52.0691 13.48V14.3052ZM54.6061 13.48C54.3776 13.48 54.1931 13.6645 54.1931 13.8931C54.1931 14.1207 54.3776 14.3052 54.6061 14.3052V13.48ZM57.2093 14.241C57.4369 14.2189 57.603 14.017 57.581 13.7903C57.559 13.5626 57.357 13.3965 57.1294 13.4195L57.2093 14.241ZM59.5912 12.9321C59.3727 12.9981 59.2497 13.2285 59.3158 13.447C59.3819 13.6645 59.6123 13.7884 59.8307 13.7223L59.5912 12.9321ZM62.2989 12.6989C62.5 12.5915 62.5752 12.3409 62.4678 12.1399C62.3604 11.9389 62.1099 11.8627 61.9088 11.971L62.2989 12.6989ZM63.9943 10.5749C63.818 10.719 63.7933 10.9797 63.9374 11.1559C64.0824 11.3322 64.3431 11.3579 64.5193 11.2128L63.9943 10.5749ZM66.4074 9.32383C66.5524 9.1476 66.5267 8.88784 66.3505 8.74282C66.1743 8.59779 65.9145 8.62349 65.7695 8.79972L66.4074 9.32383ZM67.1656 6.71427C67.0582 6.91529 67.1335 7.16497 67.3345 7.27328C67.5355 7.38067 67.7861 7.3054 67.8935 7.10438L67.1656 6.71427ZM68.9169 4.63618C68.983 4.41772 68.86 4.18733 68.6416 4.12124C68.4231 4.05515 68.1927 4.17815 68.1266 4.39661L68.9169 4.63618ZM68.614 1.93483C68.592 2.16155 68.7581 2.36348 68.9848 2.38551C69.2116 2.40754 69.4135 2.24141 69.4355 2.01469L68.614 1.93483ZM4.25791 45.6878V44.4147H3.43209V45.6878H4.25791ZM4.25791 41.8685V39.3223H3.43209V41.8685H4.25791ZM4.25791 36.7761V34.2298H3.43209V36.7761H4.25791ZM4.25791 31.6827V30.4096H3.43209V31.6827H4.25791ZM4.25791 30.4096C4.25791 29.9837 4.27443 29.5624 4.30684 29.1447L3.48349 29.0805C3.44944 29.5192 3.43209 29.9626 3.43209 30.4096H4.25791ZM4.69942 26.6481C4.89787 25.8211 5.15946 25.0179 5.47981 24.245L4.71686 23.9293C4.37999 24.7416 4.10454 25.5861 3.89627 26.4562L4.69942 26.6481ZM6.629 21.9944C7.07142 21.2738 7.56892 20.5909 8.11598 19.9511L7.48815 19.4142C6.91355 20.087 6.39035 20.8048 5.92498 21.563L6.629 21.9944ZM9.90311 18.164C10.5429 17.617 11.2267 17.1185 11.9473 16.6761L11.5149 15.973C10.7577 16.4375 10.039 16.9607 9.36706 17.5362L9.90311 18.164ZM14.1979 15.5278C14.9699 15.2075 15.773 14.945 16.6009 14.7476L16.4082 13.9436C15.538 14.1519 14.6936 14.4273 13.8812 14.7642L14.1979 15.5278ZM19.0967 14.3548C19.5143 14.3217 19.9366 14.3052 20.3625 14.3052V13.48C19.9145 13.48 19.4712 13.4975 19.0333 13.5314L19.0967 14.3548ZM20.3625 14.3052H21.6301V13.48H20.3625V14.3052ZM24.1671 14.3052H26.7032V13.48H24.1671V14.3052ZM29.2403 14.3052H31.7764V13.48H29.2403V14.3052ZM34.3134 14.3052H36.8496V13.48H34.3134V14.3052ZM39.3866 14.3052H41.9227V13.48H39.3866V14.3052ZM44.4598 14.3052H46.9959V13.48H44.4598V14.3052ZM49.5329 14.3052H52.0691V13.48H49.5329V14.3052ZM54.6061 14.3052H55.8737V13.48H54.6061V14.3052ZM55.8737 14.3052C56.3244 14.3052 56.7705 14.2841 57.2093 14.241L57.1294 13.4195C56.7163 13.4589 56.2978 13.48 55.8737 13.48V14.3052ZM59.8307 13.7223C60.6926 13.4608 61.5187 13.1166 62.2989 12.6989L61.9088 11.971C61.1764 12.363 60.4007 12.687 59.5912 12.9321L59.8307 13.7223ZM64.5193 11.2128C65.2087 10.6465 65.8411 10.0132 66.4074 9.32383L65.7695 8.79972C65.2371 9.44775 64.6423 10.0425 63.9943 10.5749L64.5193 11.2128ZM67.8935 7.10438C68.312 6.32326 68.6562 5.49808 68.9169 4.63618L68.1266 4.39661C67.8815 5.20527 67.5584 5.98088 67.1656 6.71427L67.8935 7.10438ZM69.4355 2.01469C69.4787 1.57502 69.5007 1.12984 69.5007 0.67916H68.6746C68.6746 1.10322 68.6544 1.52178 68.614 1.93483L69.4355 2.01469Z"
-                fill="#094C9F" />
-            </svg>
-            <svg width="70" height="47" viewBox="0 0 70 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path opacity="0.3"
-                d="M66.6214 45.9797C66.4607 46.1413 66.1991 46.1413 66.0376 45.9797L63.4097 43.3518C63.249 43.1912 63.249 42.9296 63.4097 42.768C63.5712 42.6074 63.8328 42.6074 63.9944 42.768L66.3295 45.1041L68.6655 42.768C68.827 42.6074 69.0886 42.6074 69.2493 42.768C69.4108 42.9296 69.4108 43.1912 69.2493 43.3518L66.6214 45.9797ZM0.673828 0.67916C0.673828 0.450606 0.859239 0.266113 1.08688 0.266113C1.31543 0.266113 1.49992 0.450606 1.49992 0.67916H0.673828ZM65.9173 44.4147C65.9173 44.1871 66.1018 44.0017 66.3295 44.0017C66.558 44.0017 66.7425 44.1871 66.7425 44.4147H65.9173ZM66.7425 41.8685C66.7425 42.0961 66.558 42.2815 66.3295 42.2815C66.1018 42.2815 65.9173 42.0961 65.9173 41.8685H66.7425ZM65.9173 39.3223C65.9173 39.0937 66.1018 38.9092 66.3295 38.9092C66.558 38.9092 66.7425 39.0937 66.7425 39.3223H65.9173ZM66.7425 36.7761C66.7425 37.0037 66.558 37.1891 66.3295 37.1891C66.1018 37.1891 65.9173 37.0037 65.9173 36.7761H66.7425ZM65.9173 34.2289C65.9173 34.0013 66.1018 33.8168 66.3295 33.8168C66.558 33.8168 66.7425 34.0013 66.7425 34.2289H65.9173ZM66.7425 31.6827C66.7425 31.9112 66.558 32.0957 66.3295 32.0957C66.1018 32.0957 65.9173 31.9112 65.9173 31.6827H66.7425ZM65.8678 29.1447C65.8503 28.9171 66.0201 28.7188 66.2478 28.7005C66.4754 28.683 66.6737 28.8528 66.6911 29.0805L65.8678 29.1447ZM66.279 26.4562C66.3313 26.6783 66.1945 26.9005 65.9733 26.9537C65.7512 27.0069 65.5282 26.8702 65.4749 26.6481L66.279 26.4562ZM64.6947 24.245C64.6075 24.0348 64.7076 23.7934 64.9187 23.7053C65.1289 23.6181 65.3703 23.7182 65.4575 23.9293L64.6947 24.245ZM64.2495 21.562C64.3689 21.7566 64.3083 22.0109 64.1137 22.1302C63.92 22.2496 63.6658 22.189 63.5464 21.9944L64.2495 21.562ZM62.0585 19.9511C61.9108 19.7777 61.931 19.517 62.1044 19.3683C62.2779 19.2205 62.5386 19.2407 62.6864 19.4142L62.0585 19.9511ZM60.8084 17.5362C60.9818 17.684 61.002 17.9447 60.8533 18.1181C60.7056 18.2916 60.4449 18.3118 60.2714 18.164L60.8084 17.5362ZM58.2282 16.6761C58.0336 16.5568 57.973 16.3025 58.0923 16.108C58.2117 15.9143 58.4659 15.8528 58.6596 15.973L58.2282 16.6761ZM56.2933 14.7642C56.5044 14.8523 56.6044 15.0937 56.5163 15.3039C56.4291 15.515 56.1877 15.615 55.9775 15.5269L56.2933 14.7642ZM53.5745 14.7467C53.3524 14.6944 53.2156 14.4714 53.2688 14.2492C53.3221 14.028 53.5442 13.8913 53.7663 13.9436L53.5745 14.7467ZM51.1421 13.5314C51.3688 13.5489 51.5395 13.7471 51.5212 13.9748C51.5037 14.2024 51.3055 14.3722 51.0778 14.3548L51.1421 13.5314ZM48.5445 14.3052C48.3159 14.3052 48.1314 14.1207 48.1314 13.8922C48.1314 13.6645 48.3159 13.48 48.5445 13.48V14.3052ZM46.0074 13.48C46.236 13.48 46.4205 13.6645 46.4205 13.8922C46.4205 14.1207 46.236 14.3052 46.0074 14.3052V13.48ZM43.4713 14.3052C43.2437 14.3052 43.0582 14.1207 43.0582 13.8922C43.0582 13.6645 43.2437 13.48 43.4713 13.48V14.3052ZM40.9352 13.48C41.1628 13.48 41.3473 13.6645 41.3473 13.8922C41.3473 14.1207 41.1628 14.3052 40.9352 14.3052V13.48ZM38.3981 14.3052C38.1705 14.3052 37.9851 14.1207 37.9851 13.8922C37.9851 13.6645 38.1705 13.48 38.3981 13.48V14.3052ZM35.862 13.48C36.0896 13.48 36.2741 13.6645 36.2741 13.8922C36.2741 14.1207 36.0896 14.3052 35.862 14.3052V13.48ZM33.325 14.3052C33.0973 14.3052 32.9119 14.1207 32.9119 13.8922C32.9119 13.6645 33.0973 13.48 33.325 13.48V14.3052ZM30.7888 13.48C31.0165 13.48 31.201 13.6645 31.201 13.8922C31.201 14.1207 31.0165 14.3052 30.7888 14.3052V13.48ZM28.2518 14.3052C28.0242 14.3052 27.8387 14.1207 27.8387 13.8922C27.8387 13.6645 28.0242 13.48 28.2518 13.48V14.3052ZM25.7157 13.48C25.9433 13.48 26.1287 13.6645 26.1287 13.8922C26.1287 14.1207 25.9433 14.3052 25.7157 14.3052V13.48ZM23.1786 14.3052C22.951 14.3052 22.7656 14.1207 22.7656 13.8922C22.7656 13.6645 22.951 13.48 23.1786 13.48V14.3052ZM20.6425 13.48C20.8701 13.48 21.0555 13.6645 21.0555 13.8922C21.0555 14.1207 20.8701 14.3052 20.6425 14.3052V13.48ZM18.1054 14.3052C17.8778 14.3052 17.6924 14.1207 17.6924 13.8922C17.6924 13.6645 17.8778 13.48 18.1054 13.48V14.3052ZM15.5693 13.48C15.797 13.48 15.9824 13.6645 15.9824 13.8922C15.9824 14.1207 15.797 14.3052 15.5693 14.3052V13.48ZM12.9653 14.241C12.7385 14.2189 12.5724 14.017 12.5944 13.7903C12.6165 13.5626 12.8184 13.3965 13.0451 13.4185L12.9653 14.241ZM10.5833 12.9321C10.8018 12.9981 10.9248 13.2285 10.8587 13.447C10.7926 13.6645 10.5622 13.7884 10.3438 13.7223L10.5833 12.9321ZM7.87558 12.6989C7.67456 12.5906 7.59929 12.3409 7.70668 12.1399C7.81407 11.9389 8.06466 11.8627 8.26568 11.971L7.87558 12.6989ZM6.18023 10.5749C6.35647 10.719 6.38217 10.9797 6.23714 11.1559C6.09211 11.3322 5.83236 11.3579 5.65612 11.2128L6.18023 10.5749ZM3.76711 9.32383C3.62208 9.1476 3.64778 8.88784 3.82401 8.74282C4.00025 8.59779 4.26001 8.62349 4.40503 8.79972L3.76711 9.32383ZM3.00893 6.71427C3.11632 6.91529 3.04106 7.16497 2.84005 7.27328C2.63903 7.38067 2.38844 7.30447 2.28104 7.10346L3.00893 6.71427ZM1.25759 4.63526C1.1915 4.41772 1.3145 4.18732 1.53296 4.12032C1.75142 4.05423 1.98181 4.17815 2.0479 4.39661L1.25759 4.63526ZM1.5605 1.93483C1.58253 2.16155 1.4164 2.36348 1.18968 2.38551C0.96296 2.40754 0.761027 2.24141 0.738997 2.01469L1.5605 1.93483ZM65.9173 45.6878V44.4147H66.7425V45.6878H65.9173ZM65.9173 41.8685V39.3223H66.7425V41.8685H65.9173ZM65.9173 36.7761V34.2289H66.7425V36.7761H65.9173ZM65.9173 31.6827V30.4096H66.7425V31.6827H65.9173ZM65.9173 30.4096C65.9173 29.9837 65.9008 29.5624 65.8678 29.1447L66.6911 29.0805C66.7251 29.5192 66.7425 29.9626 66.7425 30.4096H65.9173ZM65.4749 26.6481C65.2776 25.8211 65.0151 25.0179 64.6947 24.245L65.4575 23.9293C65.7953 24.7416 66.0706 25.5861 66.279 26.4562L65.4749 26.6481ZM63.5464 21.9944C63.104 21.2738 62.6056 20.5909 62.0585 19.9511L62.6864 19.4142C63.2619 20.087 63.7851 20.8048 64.2495 21.562L63.5464 21.9944ZM60.2714 18.164C59.6316 17.617 58.9487 17.1185 58.2282 16.6761L58.6596 15.973C59.4178 16.4375 60.1356 16.9607 60.8084 17.5362L60.2714 18.164ZM55.9775 15.5269C55.2047 15.2066 54.4015 14.945 53.5745 14.7467L53.7663 13.9436C54.6365 14.1519 55.481 14.4273 56.2933 14.7642L55.9775 15.5269ZM51.0778 14.3548C50.6602 14.3217 50.2389 14.3052 49.813 14.3052V13.48C50.26 13.48 50.7033 13.4975 51.1421 13.5314L51.0778 14.3548ZM49.813 14.3052H48.5445V13.48H49.813V14.3052ZM46.0074 14.3052H43.4713V13.48H46.0074V14.3052ZM40.9352 14.3052H38.3981V13.48H40.9352V14.3052ZM35.862 14.3052H33.325V13.48H35.862V14.3052ZM30.7888 14.3052H28.2518V13.48H30.7888V14.3052ZM25.7157 14.3052H23.1786V13.48H25.7157V14.3052ZM20.6425 14.3052H18.1054V13.48H20.6425V14.3052ZM15.5693 14.3052H14.3008V13.48H15.5693V14.3052ZM14.3008 14.3052C13.8501 14.3052 13.4049 14.2841 12.9653 14.241L13.0451 13.4185C13.4582 13.4589 13.8767 13.48 14.3008 13.48V14.3052ZM10.3438 13.7223C9.48188 13.4608 8.65578 13.1166 7.87558 12.6989L8.26568 11.971C8.99907 12.363 9.77377 12.6861 10.5833 12.9321L10.3438 13.7223ZM5.65612 11.2128C4.96679 10.6465 4.33345 10.0132 3.76711 9.32383L4.40503 8.79972C4.93741 9.44775 5.53221 10.0425 6.18023 10.5749L5.65612 11.2128ZM2.28104 7.10346C1.8634 6.32325 1.51919 5.49807 1.25759 4.63526L2.0479 4.39661C2.29298 5.20527 2.61607 5.98088 3.00893 6.71427L2.28104 7.10346ZM0.738997 2.01469C0.695857 1.57502 0.673828 1.12984 0.673828 0.67916H1.49992C1.49992 1.10231 1.52103 1.52178 1.5605 1.93483L0.738997 2.01469Z"
-                fill="#094C9F" />
-            </svg>
-          </div>
-          <div class="flex left-11 relative gap-24">
-            <img src="{% static 'assets/review_icons/Christina_P.jpg' %}" alt="png" class="outline-3 outline-gray-500/10 rounded-full h-10 w-10" />
-            <img src="{% static 'assets/review_icons/Fathima_F.jpg' %}" alt="png" class="outline-3 outline-gray-500/10 rounded-full h-10 w-10" />
-          </div>
-        </div>
-        <div class="md:max-w-80 sm:p-4 py-4 transition duration-1000 translate-x-5 opacity-0 fade-left">
-          <h3 class="md:text-4xl text-2xl poppins-regular sh-color">Enter Your Details</h3>
-          <p class="poppins-regular md:text-base text-xs text-[#3E3E3E]/60">Help us understand you better, so we can connect you with the therapist who fits your needs best.</p>
-        </div>
+      <div class="text-center space-y-2">
+        <h3 class="lg:text-6xl text-3xl text-[#094C9F] playfair-display-regular text-center">30+</h3>
+        <span class="lg:text-md text-sm text-[#3E3E3E]/60 poppins-medium">Verified Therapist</span>
       </div>
-    </section>
-  </div>
+      <div class="text-center space-y-2">
+        <h3 class="lg:text-6xl text-3xl text-[#094C9F] playfair-display-regular text-center">4 star+</h3>
+        <span class="lg:text-md text-sm text-[#3E3E3E]/60 poppins-medium">Ratings from most of our users.</span>
+      </div>
+    </div>
+    <div class="w-auto text-center p-4">
+      <p class="poppins-medium text-xl sh-color">With thousands of sessions, we've helped clients gain clarity, and feel more confident on their path to well-being</p>
+    </div>
+  </section>
+
+  {% include 'elationapp/components/tests_section.html' %}
+  {% include 'elationapp/components/accordion.html' %}
 {% endblock %}
