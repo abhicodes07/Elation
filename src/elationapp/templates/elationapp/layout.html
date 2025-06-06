@@ -20,9 +20,9 @@
 <body class="bg-white text-gray-800 transition-colors duration-500 ease-in-out">
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   <div class="md:px-5 px-3 py-3 flex flex-col w-full fixed z-30 items-center">
-    <div class="w-full rounded-lg">
+    <div class="w-full">
       <nav
-        class="poppins-regular rounded-lg w-full text-black bg-gray-300/50 backdrop-blur-sm transition-colors duration-500 ease-in-out"
+        class="poppins-regular rounded-lg w-full bg-gray-300/50 backdrop-blur-sm transition-colors duration-500 ease-in-out"
         id="nav-bar">
         <div class="px-4 py-4 flex items-center justify-between">
           <!-- Logo -->
@@ -248,12 +248,13 @@
   </div>
   <div class="md:h-24 h-22 w-full"></div>
 
-  <!-- MAIN -->
   {% block content %}
 
   {% endblock %}
 
-  <!-- SCRIPTS -->
+  {% include "elationapp/components/help_banner.html" %}
+  {% include "elationapp/components/footer.html" %}
+
   {% block scripts %}
     <script src="{% static 'javascript/script.js' %}"></script>
   {% endblock %}
