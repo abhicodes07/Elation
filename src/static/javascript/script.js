@@ -101,7 +101,7 @@ const new_observer = new IntersectionObserver((entries) => {
 
 fade_elements.forEach(el => new_observer.observe(el));
 
-// fade left and move up
+// fade left
 const fade_left = document.querySelectorAll('.fade-left');
 const left_observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -119,3 +119,22 @@ const left_observer = new IntersectionObserver((entries) => {
 });
 
 fade_left.forEach(el => left_observer.observe(el));
+
+// fade right
+const fade_right = document.querySelectorAll('.fade-right');
+const right_observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('opacity-100');
+      entry.target.classList.remove('opacity-0');
+      entry.target.classList.remove('-translate-x-5');
+      entry.target.classList.add('-translate-x-0');
+      // Unobserve if you only want it to animate once
+      // new_observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.3
+});
+
+fade_right.forEach(el => right_observer.observe(el));
