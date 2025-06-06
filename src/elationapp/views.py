@@ -97,5 +97,5 @@ def homepage(request, *args, **kwargs):
     }
     return render(request, "elationapp/home_page.html", context=context)
 
-def test_page(request, *args, **kwargs):
-    return render(request, "elationapp/components/how_we_work_section.html")
+# def test_page(request, *args, **kwargs):
+#     return render(request, "elationapp/components/how_we_work_section.html")
