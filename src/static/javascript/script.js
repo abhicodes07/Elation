@@ -1,10 +1,11 @@
-/* change background color on hover on card */ 
+/* change background color on hover on card */
 const cards = document.querySelectorAll('.card');
 const nav = document.getElementById("nav-bar");
+const compact_nav = document.getElementById("compact-nav");
 const dropDown = document.querySelectorAll('.nav-drop');
 
-
 const originalNavColor = getComputedStyle(nav).backgroundColor;
+const originalCompactNavColor = getComputedStyle(compact_nav).backgroundColor;
 const originalBodyColor = getComputedStyle(document.body).backgroundColor;
 const originalDropColor = "#ffffff";
 
@@ -18,56 +19,146 @@ const rgbaColors = [
   "rgba(111, 117, 150, 0.5)"
 ];
 
+function rgbToHex(rgb) {
+  const result = rgb.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+  if (!result) return null;
+
+  const [, r, g, b] = result.map(Number);
+  return (
+    '#' +
+    Number(r).toString(16).padStart(2, '0') +
+    Number(g).toString(16).padStart(2, '0') +
+    Number(b).toString(16).padStart(2, '0')
+  );
+}
+
+
+// DARK MODE
+function toggleDarkMode() {
+  const root = document.documentElement; // html
+  const isDarkMode = root.classList.toggle('dark'); // adds or removes 'dark' class
+
+  if (isDarkMode) {
+    // reset changese when switching to dark mode
+    resetLightModeChanges();
+  } else {
+    // run light mode specific script when switching to light mode 
+    executeLightModeScript();
+  }
+
+  // save theme preference
+  localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+}
+
+// load theme on page load
+document.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+    executeLightModeScript();
+  }
+});
+
 let activeCardIndex = null;
 let clickAndHover = null;
 
-cards.forEach((card, index) => {
-  const color = card.dataset.color;
+// handle event listeners from light mode
+const eventHandlers = {
+  clickHandler: [],
+  mouseEnterHandler: [],
+  mouseLeaveHandler: [],
+};
 
-  card.addEventListener('click', () => {
-    if (activeCardIndex === index) {
-      // if same card clicked change back to original
-      document.body.style.backgroundColor = originalBodyColor;
-      nav.style.backgroundColor = originalNavColor;
-      activeCardIndex = null;
-      clickAndHover = null;
-      dropDown.forEach(drop => {
-        drop.style.backgroundColor = originalDropColor;
-      });
-    } else {
-      // change color when new card clicked
+// execute light mode specific scripts
+function executeLightModeScript() {
+  // stop execution in dark mode
+  if (document.documentElement.classList.contains('dark')) return;
+
+  cards.forEach((card, index) => {
+    const color = card.dataset.color;
+
+    const clickHandler = () => {
+      if (activeCardIndex === index) {
+        // if same card clicked change back to original
+        document.body.style.backgroundColor = originalBodyColor;
+        nav.style.backgroundColor = originalNavColor;
+        compact_nav.style.backgroundColor = originalCompactNavColor;
+        activeCardIndex = null;
+        clickAndHover = null;
+        dropDown.forEach(drop => {
+          drop.style.backgroundColor = originalDropColor;
+        });
+      } else {
+        // change color when new card clicked
+        document.body.style.backgroundColor = color;
+        nav.style.backgroundColor = rgbaColors[index];
+        compact_nav.style.backgroundColor = rgbaColors[index];
+        activeCardIndex = index;
+        clickAndHover = index;
+        dropDown.forEach(drop => {
+          drop.style.backgroundColor = color;
+        });
+      }
+    };
+
+    // on hover preview colors
+    const mouseEnterHandler = () => {
       document.body.style.backgroundColor = color;
       nav.style.backgroundColor = rgbaColors[index];
-      activeCardIndex = index;
-      clickAndHover = index;
-      dropDown.forEach(drop => {
-        drop.style.backgroundColor = color;
-      });
-    }
-  })
+    };
 
-  // card.style.transition = 'box-shadow 0.5s ease-in-out';
-
-  // on hover preview colors
-  card.addEventListener('mouseenter', () => {
-    document.body.style.backgroundColor = color;
-    nav.style.backgroundColor = rgbaColors[index];
-  });
-
-  // on leave change back to original
-  card.addEventListener('mouseleave', () => {
-    nav.style.backgroundColor = originalNavColor;
-    document.body.style.backgroundColor = originalBodyColor;
-
-    if (activeCardIndex != null) {
-      document.body.style.backgroundColor = originalBodyColor;
+    // on leave change back to original
+    const mouseLeaveHandler = () => {
       nav.style.backgroundColor = originalNavColor;
-      document.body.style.backgroundColor = datasetColors[activeCardIndex];
-      nav.style.backgroundColor = rgbaColors[activeCardIndex];
+      document.body.style.backgroundColor = originalBodyColor;
+
+      if (activeCardIndex != null) {
+        document.body.style.backgroundColor = originalBodyColor;
+        nav.style.backgroundColor = originalNavColor;
+        document.body.style.backgroundColor = datasetColors[activeCardIndex];
+        nav.style.backgroundColor = rgbaColors[activeCardIndex];
+      }
+    };
+
+    // attach event listeners and store references
+    card.addEventListener('click', clickHandler);
+    card.addEventListener('mouseenter', mouseEnterHandler);
+    card.addEventListener('mouseleave', mouseLeaveHandler);
+
+    eventHandlers.clickHandler[index] = clickHandler;
+    eventHandlers.mouseEnterHandler[index] = mouseEnterHandler;
+    eventHandlers.mouseLeaveHandler[index] = mouseLeaveHandler;
+  });
+}
+
+// reset light mode changes in dark mode
+function resetLightModeChanges() {
+  document.body.removeAttribute('style');
+  nav.removeAttribute('style');
+  compact_nav.style.removeProperty('background-color');
+
+  cards.forEach((card, index) => {
+    if (eventHandlers.clickHandler[index]) { 
+      card.removeEventListener('click', eventHandlers.clickHandler[index]);
+    }
+    if (eventHandlers.mouseEnterHandler[index]) { 
+      card.removeEventListener('mouseenter', eventHandlers.mouseEnterHandler[index]);
+    }
+    if (eventHandlers.mouseLeaveHandler[index]) { 
+      card.removeEventListener('mouseleave', eventHandlers.mouseLeaveHandler[index]);
     }
   });
-});
 
+  // clean up stores event listeners
+  eventHandlers.clickHandler = [];
+  eventHandlers.mouseEnterHandler = [];
+  eventHandlers.mouseLeaveHandler = [];
+}
+
+
+// ============ Animations ============
 // fade-in box
 const fade_boxes = document.querySelectorAll('#fade-box')
 const observer = new IntersectionObserver((entries) => {
