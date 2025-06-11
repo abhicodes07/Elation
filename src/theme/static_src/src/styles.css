@@ -8,3 +8,84 @@
   * the scope of this path.
   */
 @source "../../../**/*.{html,py,js}";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* | Shade           | Hex       | Usage Suggestion               |
+| --------------- | --------- | ------------------------------ |
+| `warmcream-100` | `#f8f6f2` | Ultra light bg                 |
+| `warmcream-200` | `#f0ece6` | Light bg                       |
+| `warmcream-300` | `#e5e0d8` | Main (`--color-warmcream`)     |
+| `warmcream-400` | `#d6d0c6` | Hover shade                    |
+| `warmcream-500` | `#bfb9ab` | Text/Icon                      |
+| `warmcream-600` | `#a79f94` | Deep hover or border           |
+| `warmcream-700` | `#8d867d` | Contrast text                  |
+| `warmcream-800` | `#726c65` | Outline/shadow                 |
+| `warmcream-900` | `#59524e` | Strong contrast, dark mode use |
+
+| Shade          | Hex       | Usage Suggestion          |
+| -------------- | --------- | ------------------------- |
+| `warmgold-100` | `#fff9ed` | Lightest background       |
+| `warmgold-200` | `#fdf2dc` | Light cream               |
+| `warmgold-300` | `#f5e6c8` | Main (`--color-warmgold`) |
+| `warmgold-400` | `#e4d3af` | Hover shade               |
+| `warmgold-500` | `#d2be97` | Secondary                 |
+| `warmgold-600` | `#bfa97e` | Text, icon, button bg     |
+| `warmgold-700` | `#9e8c66` | Accent border             |
+| `warmgold-800` | `#7c6f4e` | Deep tone                 |
+| `warmgold-900` | `#5a5237` | Strong contrast/dark mode |
+
+| Shade           | Hex       | Usage Suggestion                |
+| --------------- | --------- | ------------------------------- |
+| `sandstone-100` | `#f3eee7` | Light bg                        |
+| `sandstone-200` | `#e5dbcb` | Soft section bg                 |
+| `sandstone-300` | `#d6c9b5` | Main (`--color-mildsandstone`)  |
+| `sandstone-400` | `#c3b59f` | Hover                           |
+| `sandstone-500` | `#b09e88` | Text color                      |
+| `sandstone-600` | `#9c8771` | Darker icon or text             |
+| `sandstone-700` | `#836f5d` | Outline or border               |
+| `sandstone-800` | `#685746` | Dark hover or background        |
+| `sandstone-900` | `#4d4032` | Darkest, for contrast/dark mode | */
+
+
+
+@theme {
+  --color-vagus: #3E3E3E;
+
+  --color-warp-heading: #e3e3e1;
+  --color-warp-blockquote: #b5b5b3;
+  --color-warp-subhead: #878786;
+  --color-charcoal: #121212;
+  --color-navy-dark: #1E262F;
+  --color-navy-light: #3C81D6;
+
+  --color-warmcream-100: #f8f6f2;
+  --color-warmcream-200: #f0ece6;
+  --color-warmcream-300: #e5e0d8;
+  --color-warmcream-400: #d6d0c6;
+  --color-warmcream-500: #bfb9ab;
+  --color-warmcream-600: #a79f94;
+  --color-warmcream-700: #8d867d;
+  --color-warmcream-800: #726c65;
+  --color-warmcream-900: #59524e;
+
+  --color-warmgold-100: #fff9ed;
+  --color-warmgold-200: #fdf2dc;
+  --color-warmgold-300: #f5e6c8;
+  --color-warmgold-400: #e4d3af;
+  --color-warmgold-500: #d2be97;
+  --color-warmgold-600: #bfa97e;
+  --color-warmgold-700: #9e8c66;
+  --color-warmgold-800: #7c6f4e;
+  --color-warmgold-900: #5a5237;
+
+  --color-sandstone-100: #f3eee7;
+  --color-sandstone-200: #e5dbcb;
+  --color-sandstone-300: #d6c9b5;
+  --color-sandstone-400: #c3b59f;
+  --color-sandstone-500: #b09e88;
+  --color-sandstone-600: #9c8771;
+  --color-sandstone-700: #836f5d;
+  --color-sandstone-800: #685746;
+  --color-sandstone-900: #4d4032;
+}
+
