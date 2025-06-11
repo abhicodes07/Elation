@@ -1,0 +1,38 @@
+{% load static %}
+
+<!--  -->
+<div class="bg-white lg:my-16 my-10 dark:bg-navy-dark">
+  <section class="flex flex-col gap-4 items-center py-7">
+    <div class="text-center opacity-0 transition-opacity duration-1000 translate-y-5 fade-in">
+      <h1 class="poppins-regular sh-color sm:text-4xl text-2xl sm:w-sm dark:text-warp-heading">Reasons to keep us dedicated</h1>
+      <span class="poppins-regular text-vagus/80 sm:text-base text-xs dark:text-warp-subhead">Not just reviews, the stories of impact</span>
+    </div>
+    <div class="w-full py-7 overflow-x-auto bg-white inline-flex snap-x snap-mandatory custom-scroll dark:bg-navy-dark">
+      <div class="w-max inline-flex gap-6 px-12">
+        {% for detail in reviews %}
+          {% with user=detail.0 image=detail.1 profession=detail.2 review=detail.3 %}
+            <div id="review-cards" class="scroll-ml-6 snap-center shrink-0 snap-normal transition duration-1000 translate-x-5 opacity-0 fade-left ease-in-out hover:scale-105 cursor-pointer tracking-wide rounded-2xl md:max-w-md max-w-72 max-h-60 bg-white grid grid-cols-1 gap-5 shadow-lg shadow-gray-400/60 p-4 dark:bg-charcoal/40 dark:backdrop-blur-xl dark:shadow-none">
+              <div class="flex gap-2">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </div>
+              <div class="grid grid-cols-1 gap-4">
+                <p class="line-clamp-4 min-h-20 poppins-regular text-vagus text-sm dark:text-warp-blockquote">"{{ review }}"</p>
+                <div class="inline-flex items-end gap-2">
+                  <span><img src="{% static 'assets/review_icons/' %}{{ image }}.jpg" alt="{{ user }}" class="rounded-full h-10 w-10" /></span>
+                  <div class="flex flex-col">
+                    <span class="poppins-medium text-vagus text-sm dark:text-warp-heading">{{ user }}</span>
+                    <span class="poppins-regular text-xs text-[#3E3E3E]/60 dark:text-warp-subhead">{{ profession }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endwith %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</div>

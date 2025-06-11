@@ -3,261 +3,33 @@
 
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}
+        Elation
+      {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    {% tailwind_css %}
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>
-    {% block title %}
-    Elation
+  <body class="bg-white text-gray-800 transition-colors duration-500 ease-in-out dark:bg-charcoal">
+    {% include 'elationapp/components/navbar.html' %}
+
+    {% comment %}Main{% endcomment %}
+    {% block content %}
+
     {% endblock %}
-  </title>
-  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous">
-  {% tailwind_css %}
-</head>
 
-<body class="bg-white text-gray-800 transition-colors duration-500 ease-in-out">
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  <div class="md:px-5 px-3 py-3 flex flex-col w-full fixed z-30 items-center">
-    <div class="w-full">
-      <nav
-        class="poppins-regular rounded-lg w-full bg-gray-300/50 backdrop-blur-sm transition-colors duration-500 ease-in-out"
-        id="nav-bar">
-        <div class="px-4 py-4 flex items-center justify-between">
-          <!-- Logo -->
-          <a class="flex items-center" href="#"><img src="{% static 'assets/logo_purple_nobg_sm.png' %}" alt=""
-              class="md:h-12 h-10 w-30 md:w-36" /></a>
+    {% include 'elationapp/components/help_banner.html' %}
+    {% include 'elationapp/components/footer.html' %}
 
-          <!-- Desktop Nav Links -->
-          <div class="poppins-regular sh-color justify-between hidden lg:flex items-center xl:text-sm text-[10px]">
-            <div class="relative group">
-              <a href="#" class="flex mx-3 items-center relative group">
-                <span>Specific Disorder</span>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 group-hover:rotate-90 transition duration-300">
-                  <path fill-rule="evenodd"
-                    d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
-                    clip-rule="evenodd" />
-                </svg>
-              </a>
-
-              <!-- Dropdown -->
-              <div x-data="{ startY: 0, scrollTop: 0 }"
-                @touchstart="startY = $event.touches[0].clientY; scrollTop = $refs.list.scrollTop"
-                @touchmove="let moveY = $event.touches[0].clientY; $refs.list.scrollTop = scrollTop + (startY - moveY)"
-                class="nav-drop absolute overflow-y-auto group text-sm top-full left-0 w-max opacity-0 invisible group-hover:visible group-hover:translate-y-1.5 transition-all duration-300 ease-in-out transform flex-col group-hover:opacity-100 bg-white rounded-[25px] shadow-lg px-6 py-4 text-left space-y-4 max-h-72 custom-scroll"
-                x-ref="list">
-                <ul class="justify-between items-center w-48">
-                  <li>
-                    <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Depression
-                      <span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Eating Disorder
-                      <span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Hypochondriasis<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Mood
-                      Disorder<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      class="hover:text-gray-500 py-2 flex justify-between items-center w-48">OCD<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Postpartum<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Personality
-                      Disorder<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      class="hover:text-gray-500 py-2 flex justify-between items-center w-48">PTD<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Phobia<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Psychosis<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      class="hover:text-gray-500 py-2 flex justify-between items-center w-48">PTSD<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Schizophrenia<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      class="hover:text-gray-500 py-2 flex justify-between items-center w-48">ADHD<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Autistic<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Abuse<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Addiction<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Self-Regulation<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      class="hover:text-gray-500 py-2 flex justify-between items-center w-48">LGBTQ<span>›</span></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="relative group">
-              <a href="#" class="flex mx-3 items-center">
-                Life & Work
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 group-hover:rotate-90 transition duration-300">
-                  <path fill-rule="evenodd"
-                    d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
-                    clip-rule="evenodd" />
-                </svg>
-              </a>
-
-              <!-- Dropdown -->
-              <div
-                class="nav-drop absolute group text-sm top-full left-0 w-max opacity-0 invisible group-hover:visible group-hover:translate-y-2 transition-all duration-300 ease-in-out transform flex-col group-hover:opacity-100 bg-white rounded-[25px] shadow-lg px-6 py-4 text-left space-y-4">
-                <ul class="justify-between items-center w-48">
-                  <li>
-                    <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Crisis
-                      Intervention<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Extential
-                      Crisis<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Trauma<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Chronic
-                      Illness<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Suicidal
-                      Tendencies<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Burnout<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Boosting
-                      Productivity<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Career
-                      Coaching<span>›</span></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="relative group">
-              <a href="#" class="flex mx-3 items-center">
-                Relationship
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 group-hover:rotate-90 transition duration-300">
-                  <path fill-rule="evenodd"
-                    d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
-                    clip-rule="evenodd" />
-                </svg>
-              </a>
-
-              <!-- Dropdown -->
-              <div
-                class="nav-drop absolute group text-sm top-full left-0 w-max opacity-0 invisible group-hover:visible group-hover:translate-y-2 transition-all duration-300 ease-in-out transform flex-col group-hover:opacity-100 bg-white rounded-[25px] shadow-lg px-6 py-4 text-left space-y-4">
-                <ul class="justify-between items-center w-48">
-                  <li>
-                    <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Couples
-                      Counselling<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Divorce
-                      Counselling<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Family
-                      Counselling<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Infertillity
-                      Counselling<span>›</span></a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Sexual
-                      Intimacy<span>›</span></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="relative group">
-              <a href="#" class="flex mx-3 items-center">Therapist</a>
-            </div>
-
-            <div class="relative group">
-              <a href="#" class="flex mx-3 items-center">Plans</a>
-            </div>
-
-            <div class="h-6 border-l border-back mx-2"></div>
-
-            <div class="relative group">
-              <a href="#" class="flex mx-3 items-center">Business</a>
-            </div>
-
-            <div class="relative group">
-              <a href="#" class="flex mx-3 items-center">The Advice Room</a>
-            </div>
-          </div>
-
-          <!-- Login + Mobile Menu Button -->
-          <div class="flex items-center space-x-4">
-            <a href="#"
-              class="text-lg poppins-regular ease-in-out transition-colors duration-300 hover:text-[#094C9F]">Login</a>
-            <button class="lg:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-700" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </div>
-  <div class="md:h-24 h-22 w-full"></div>
-
-  {% block content %}
-
-  {% endblock %}
-
-  {% include "elationapp/components/help_banner.html" %}
-  {% include "elationapp/components/footer.html" %}
-
-  {% block scripts %}
-    <script src="{% static 'javascript/script.js' %}"></script>
-  {% endblock %}
-</body>
-
+    {% block scripts %}
+      <script src="{% static 'javascript/script.js' %}" defer></script>
+    {% endblock %}
+  </body>
 </html>

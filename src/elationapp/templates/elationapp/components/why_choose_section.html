@@ -1,0 +1,106 @@
+{% load static %}
+
+<!--  -->
+<section id="fade-box" class="opacity-0 transition-opacitity duration-1000 w-full text-center bg-[#E9F3FF] md:rounded-[235px] rounded-[130px] lg:my-16 my-10 dark:bg-navy-dark">
+  <div class="grid grid-cols-1 gap-12 py-16 md:px-20 px-8">
+    <div class="grid grid-cols-1 items-center gap-3 w-full justify-center">
+      <h2 class="poppins-regular sm:text-4xl text-2xl text-vagus tracking-wide  dark:text-warp-heading">Why choose Elation Mind Health?</h2>
+      <p class="poppins-regular text-vagus md:text-sm text-xs dark:text-warp-blockquote">Guidance, encouragement, and expert care at every step of your journey</p>
+    </div>
+    <div class="relative md:max-w-5xl mx-auto md:px-0 px-4">
+      <span class="absolute tracking-widest whitespace-nowrap poppins-regular px-2 sm:px-3 sm:text-base text-sm bg-[#E9F3FF] -top-2.5 left-1/2 -translate-x-1/2 text-navy-light dark:bg-navy-dark">OUR IMPACT</span>
+      <div class="border-2 p-6 border-[#3C81D6] rounded-4xl">
+        <div class="grid sm:grid-cols-3 grid-cols-1 text-center poppins-regular sm:gap-16 gap-12">
+          <div class="flex flex-col items-center">
+            <h3 class="text-[#094C9F] text-4xl poppins-medium mb-2 dark:text-navy-light">91%</h3>
+            <p class="text-md leading-snug text-vagus dark:text-warp-blockquote">
+              of our members feel <strong> truly satisfied</strong> and happy.
+            </p>
+          </div>
+          <div class="flex flex-col items-center">
+            <h3 class="text-[#094C9F] text-4xl poppins-medium mb-2 dark:text-navy-light">78%</h3>
+            <p class="text-md leading-snug text-vagus dark:text-warp-blockquote">
+              Our members experience noticeable improvement <strong>within 9 weeks.</strong>
+            </p>
+          </div>
+          <div class="flex flex-col items-center">
+            <h3 class="text-[#094C9F] text-4xl poppins-medium mb-2 dark:text-navy-light">83%</h3>
+            <p class="text-md leading-snug text-vagus dark:text-warp-blockquote">
+              of our customers are <strong>happy to recommend</strong> us to their loved ones.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:grid lg:grid-cols-2 flex flex-wrap gap-10 mx-auto w-full">
+      <div class="lg:order-first order-last rounded-4xl bg-white p-6 sm:pb-14 grid grid-cols-1 gap-8 shadow-xl shadow-[#63636326] w-full opacity-0 transition-opacity duration-1000 translate-y-5 fade-in dark:bg-charcoal">
+        <div class="md:text-left text-center">
+          <h3 class="poppins-medium text-[#101828] text-[22px] dark:text-warp-heading">Tailored for everyone</h3>
+          <p class="text-[#667085] poppins-regular dark:text-warp-subhead">No matter where you are in life, our therapy plans are designed to meet your unique needs—offering the right support, at the right time, just for you</p>
+        </div>
+        <section class="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0 grid grid-cols-1 gap-4 px-6 text-left">
+          <div class="transition duration-700 hover:scale-105 ease-in-out cursor-pointer rounded-2xl bg-[#CEEFEC] px-4 py-4 dark:bg-[#15312F]">
+            <img src="{% static 'assets/icons/emerald.png' %}" alt="emerald" class="pb-2 scale-90" />
+            <div class="pl-2">
+              <h4 class="poppins-medium text-[#101828] dark:text-warp-heading">Emerald</h4>
+              <p class="poppins-regular text-[#667085] dark:text-warp-subhead">Therapists with 2-3 years of hands-on experience.</p>
+            </div>
+          </div>
+          <div class="transition duration-700 hover:scale-105 ease-in-out cursor-pointer rounded-2xl bg-[#FF525236]/60 px-4 py-4 dark:bg-[#301A1A]">
+            <img src="{% static 'assets/icons/ruby.png' %}" alt="ruby" class="pb-2 scale-90" />
+            <div class="pl-2">
+              <h4 class="poppins-medium text-[#101828] dark:text-warp-heading">Ruby</h4>
+              <p class="poppins-regular text-[#667085] dark:text-warp-subhead">Therapists with 3-5 years of hands-on experience.</p>
+            </div>
+          </div>
+          <div class="transition duration-700 hover:scale-105 ease-in-out cursor-pointer rounded-2xl bg-[#F3F5FF] px-4 py-4 dark:bg-[#212229]">
+            <img src="{% static 'assets/icons/diamond.png' %}" alt="diamond" class="pb-2 scale-90" />
+            <div class="pl-2">
+              <h4 class="poppins-medium text-[#101828] dark:text-warp-heading">Diamond</h4>
+              <p class="poppins-regular text-[#667085] dark:text-warp-subhead">Therapists with 8-10 years of hands-on experience.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="lg:order-last order-first rounded-4xl bg-white p-6 grid md:grid-cols-1 shadow-xl shadow-[#63636326] w-full gap-8 opacity-0 transition-opacity duration-1000 translate-y-5 fade-in dark:bg-charcoal">
+        <div class="md:text-left text-center">
+          <h3 class="poppins-medium text-[#101828] text-[22px] dark:text-warp-heading">Beyond Ordinary Care</h3>
+          <p class="text-[#667085] poppins-regular dark:text-warp-subhead">How we are redefining mental health support</p>
+        </div>
+        <div class="sm:grid sm:grid-cols-2 sm:gap-4 grid grid-cols-1 gap-4 text-left">
+          <div class="text-[#667085] poppins-regular p-4 dark:text-warp-blockquote">
+            <ul class="space-y-3 text-sm">
+              {% for features in feature_list %}
+                <li class="flex gap-2 items-start">
+                  <div class="w-[22px] min-w-[22px] h-[23px]">
+                    <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2106 6.24831C18.5197 6.58932 18.4938 7.11632 18.1528 7.4254L8.54749 16.1313C8.20648 16.4404 7.67947 16.4145 7.3704 16.0735L3.41315 11.7074C3.10407 11.3664 3.12996 10.8394 3.47097 10.5304C3.81198 10.2213 4.33898 10.2472 4.64806 10.5882L8.04566 14.3367L17.0335 6.19049C17.3745 5.88141 17.9015 5.9073 18.2106 6.24831Z" fill="#009688" />
+                    </svg>
+                  </div>
+                  <span>{{ features }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="w-full bg-white rounded-xl shadow-md dark:bg-navy-dark">
+            <div class="flex items-end gap-2 justify-center p-6 pb-0 h-full poppins-medium">
+              <!-- Bar 1 -->
+              <div class="flex flex-col items-center">
+                <div class="text-[#73B2FF] text-sm">In-office</div>
+                <div class="w-24 h-24 bg-[#79C1BA] rounded-t-[20px]"></div>
+              </div>
+              <!-- Bar 2 -->
+              <div class="flex flex-col items-center w-20">
+                <div class="text-[#3A60C4] text-sm text-center">Vagus Mind Health</div>
+                <div class="w-24 h-44 bg-[#73B2FF] rounded-t-[20px]"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="inline-flex justify-center w-full p-5">
+      <a href="#" id="fr-cnslt-btn"><button type="button" class="w-full cursor-pointer flex justify-center items-center gap-2 px-4 py-2.5 rounded-lg bg-[#094C9F] hover:bg-[#063a78] text-white text-sm md:text-base poppins-medium shadow-md shadow-blue-200 hover:shadow-lg transition duration-300 ease-in-out dark:shadow-none dark:text-warp-heading dark:hover:shadow-none">Find a therapist</button></a>
+    </div>
+  </div>
+</section>
