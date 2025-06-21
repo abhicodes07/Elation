@@ -33,7 +33,7 @@ function rgbToHex(rgb) {
 }
 
 
-// DARK MODE
+// ============ DARK MODE ============
 function toggleDarkMode() {
   const root = document.documentElement; // html
   const isDarkMode = root.classList.toggle('dark'); // adds or removes 'dark' class
@@ -140,13 +140,13 @@ function resetLightModeChanges() {
   compact_nav.style.removeProperty('background-color');
 
   cards.forEach((card, index) => {
-    if (eventHandlers.clickHandler[index]) { 
+    if (eventHandlers.clickHandler[index]) {
       card.removeEventListener('click', eventHandlers.clickHandler[index]);
     }
-    if (eventHandlers.mouseEnterHandler[index]) { 
+    if (eventHandlers.mouseEnterHandler[index]) {
       card.removeEventListener('mouseenter', eventHandlers.mouseEnterHandler[index]);
     }
-    if (eventHandlers.mouseLeaveHandler[index]) { 
+    if (eventHandlers.mouseLeaveHandler[index]) {
       card.removeEventListener('mouseleave', eventHandlers.mouseLeaveHandler[index]);
     }
   });
@@ -159,7 +159,7 @@ function resetLightModeChanges() {
 
 
 // ============ Animations ============
-// fade-in box
+// ============ FADE IN BOX ============
 const fade_boxes = document.querySelectorAll('#fade-box')
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -173,7 +173,7 @@ const observer = new IntersectionObserver((entries) => {
 
 fade_boxes.forEach(box => observer.observe(box));
 
-// fade in and move up
+// ============ FADE IN AND MOVE UP ANIMATION ============
 const fade_elements = document.querySelectorAll('.fade-in');
 const new_observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -192,7 +192,7 @@ const new_observer = new IntersectionObserver((entries) => {
 
 fade_elements.forEach(el => new_observer.observe(el));
 
-// fade left
+// ============ FADE LEFT ANIMATION ============
 const fade_left = document.querySelectorAll('.fade-left');
 const left_observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -211,7 +211,7 @@ const left_observer = new IntersectionObserver((entries) => {
 
 fade_left.forEach(el => left_observer.observe(el));
 
-// fade right
+// ============ FADE RIGHT ANIMATION ============
 const fade_right = document.querySelectorAll('.fade-right');
 const right_observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -229,3 +229,28 @@ const right_observer = new IntersectionObserver((entries) => {
 });
 
 fade_right.forEach(el => right_observer.observe(el));
+
+// ============ HEIGHT RE-ADJUSTMENT FOR IMAGE CARD PLACE-HOLDER DIV ============
+function adjustSpacerHeight() {
+  const fixedSection = document.getElementById("fixed-section");
+  const spacer = document.getElementById("spacer");
+  spacer.style.height = (fixedSection.offsetHeight - 40) + "px";
+}
+
+// initail call
+adjustSpacerHeight()
+
+// Re-adjust on window resize (responsive)
+window.addEventListener("resize", adjustSpacerHeight);
+
+// ============ HEIGHT RE-ADJUSTMENT FOR PSEUDO ELEMENT IN HEADER TO FIT NAV-BAR ============
+function pseudoElementHeight() {
+  const nav = document.querySelector(".nav__bar");
+  const width = nav.offsetWidth + "px";
+  const height = nav.offsetHeight + "px";
+  nav.style.setProperty('--nav-width', width);
+  nav.style.setProperty('--nav-height', height);
+}
+
+pseudoElementHeight();
+window.addEventListener("resize", pseudoElementHeight);

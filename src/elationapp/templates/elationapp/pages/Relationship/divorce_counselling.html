@@ -1,0 +1,106 @@
+{% extends 'elationapp/pages_layout.html' %}
+{% load static %}
+
+{% block title %}
+{{ block.super }} - Divorce Counselling
+{% endblock %}
+
+{% block heading_large_screen %}
+<h1 class="text-[#094C9F] dark:text-navy-light text-5xl tracking-wide poppins-regular">Divorce Counselling</h1>
+<blockquote class="poppins-regular text-vagus text-base dark:text-warp-blockquote">Divorce is one of life’s most challenging transitions, bringing emotional, practical, and relational struggles. It affects...  read more</blockquote>
+{% endblock %}
+
+{% block header_img_large_screen %}
+<div class="flex items-end h-full w-full">
+  <img src="{% static 'assets/disorder/camden.jpg' %}" alt="depression"
+    class="object-fill h-full object-center md:[clip-path:ellipse(70%_50%_at_80%_50%)]" />
+</div>
+{% endblock %}
+
+{% block header_img_small_screen %}
+<div class="lg:hidden h-[33rem] bg-top md:bg-contain bg-fill bg-fixed bg-no-repeat"
+  style="background-image: url({% static 'assets/disorder/camden.jpg' %});"></div>
+{% endblock %}
+
+{% block card_headings %}
+<h3 class="text-[#094C9F] sm:text-3xl text-2xl tracking-wide poppins-regular dark:text-navy-light">Divorce Counselling
+</h3>
+<blockquote class="poppins-regular text-vagus text-base dark:text-warp-blockquote">Divorce is one of life’s most challenging transitions, bringing emotional, practical, and relational struggles. It affects...  read more</blockquote>
+{% endblock %}
+
+{% block svg_section %}
+<div
+  class="lg:order-2 order-1 w-full flex md:justify-center lg:gap-50 md:gap-20 justify-between px-8 py-5 bg-[#E9F3FF] dark:bg-navy-dark">
+  <div class="grid gap-2 justify-center items-center poppins-medium">
+    <div class="w-full flex justify-center">
+      <img src="{% static 'assets/svgs/depression.png' %}" alt="" class="h-10 w-10" />
+    </div>
+    <p class="text-vagus text-sm dark:text-warp-blockquote">Frequent Miscommunication</p>
+  </div>
+  <div class="grid justify-center items-center poppins-medium">
+    <div class="w-full flex justify-center">
+      <img src="{% static 'assets/svgs/sleep-disorder.png' %}" alt="" class="h-10 w-10" />
+    </div>
+    <p class="text-vagus text-sm dark:text-warp-blockquote">Lack of affection</p>
+  </div>
+  <div class="sm:grid hidden justify-center items-center poppins-medium">
+    <div class="w-full flex justify-center">
+      <img src="{% static 'assets/svgs/thinking.png' %}" alt="think" class="h-10 w-10" />
+    </div>
+    <p class="text-vagus text-sm dark:text-warp-blockquote">Emotional Distance</p>
+  </div>
+</div>
+{% endblock %}
+
+{% block first_article %}
+<article class="poppins-regular grid gap-8 text-vagus dark:text-warp-blockquote">
+  <p class="text-pretty text-justify">Divorce is one of life’s most challenging transitions, bringing emotional, practical, and relational struggles. It affects not only the individuals involved but also their families, friends, and overall support system. At Vagus Mind Health, we understand that navigating divorce requires compassion, clarity, and a structured approach. Our counselling services provide a safe space to process emotions, build resilience, and create a path forward that aligns with your well-being and future goals.</p>
+  <p class="text-pretty text-justify">Whether you’re struggling with grief, co-parenting, or adjusting to a new life, professional support can ease the process and help you move forward.</p>
+</article>
+{% endblock %}
+
+{% block review_card %}
+<div class="w-full md:px-10 md:py-8">
+  <div class="bg-[#E9F3FF] rounded-4xl dark:bg-navy-dark md:p-8 p-6 grid justify-center gap-2 lg:flex lg:gap-10">
+    <div class="lg:hidden flex justify-center">
+      <img src="{% static 'assets/people/someone.jpg' %}" alt="Jessie"
+        class="object-center rounded-full object-cover h-32 w-32" />
+    </div>
+    <img src="{% static 'assets/people/someone.jpg' %}" alt="Jessie"
+      class="lg:block hidden object-center rounded-full object-cover h-32 w-32" />
+    <div class="grid text-pretty text-justify gap-2 place-content-center">
+      <h3 class="poppins-semibold text-vagus-blue dark:text-warp-heading lg:text-left text-center">Jessie, Housemaker
+      </h3>
+      <p class="poppins-regular text-vagus dark:text-warp-blockquote">As a home-maker, I felt trapped in an endless
+        cycle of exhaustion and sadness. Therapy with Elation Mind Health helped me rediscover joy in the little things
+        and regain control of my life.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block third_article %}
+<article class="poppins-regular grid gap-8 text-vagus dark:text-warp-blockquote">
+  <h2 class="text-[#094C9F] text-2xl poppins-medium dark:text-navy-light">What to Expect in Your First Session of
+    Divorce Counselling ?</h2>
+  <p class="text-pretty text-justify">We are committed to providing high-quality services to people who are looking for
+    the best depression treatment clinics.</p>
+  <ol class="poppins-semibold list-decimal grid gap-8 list-inside text-vagus-blue dark:text-warp-heading">
+    <li>
+      Initial assessment<p class="poppins-regular text-vagus dark:text-warp-blockquote text-pretty text-justify">At the
+        beginning of the session, we engage in an open conversation about your experiences, challenges, and emotions.
+        This allows your therapist to gain insight into your situation and determine the best support for you.</p>
+    </li>
+    <li>
+      Set Personalized Therapy Goals<p
+        class="poppins-regular text-vagus dark:text-warp-blockquote text-pretty text-justify">In the second step of your
+        depression treatment, you will set goals with your therapist.</p>
+    </li>
+    <li>
+      Discuss Your Tailored Care Plan<p
+        class="poppins-regular text-vagus dark:text-warp-blockquote text-pretty text-justify">Your therapist will
+        outline a customized care plan designed to meet your unique needs and recovery goals.</p>
+    </li>
+  </ol>
+</article>
+{% endblock %}

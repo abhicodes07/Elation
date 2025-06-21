@@ -6,15 +6,15 @@
       id="nav-bar">
       <div class="px-4 py-4 flex items-center justify-between">
         <!-- Logo -->
-        <a class="flex items-center" href="/">
+        <a class="flex items-center" href="{% url "" %}">
           <img src="{% static 'assets/elation.png' %}" alt="Elation" class="md:h-12 h-10 w-30 md:w-36 block dark:hidden" />
           <img src="{% static 'assets/elation_white.png' %}" alt="Elation" class="md:h-12 h-10 w-30 md:w-36 hidden dark:block" />
-          </a>
+        </a>
 
         <!-- Desktop Nav Links -->
         <div class="poppins-regular text-vagus justify-between hidden lg:flex items-center xl:text-sm text-[10px] dark:text-warp-heading">
           <div class="relative group">
-            <a href="#" class="flex mx-3 items-center relative group">
+            <div class="flex mx-3 items-center relative group cursor-pointer">
               <span>Specific Disorder</span>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                 class="size-5 group-hover:rotate-90 transition duration-300">
@@ -22,7 +22,7 @@
                   d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
                   clip-rule="evenodd" />
               </svg>
-            </a>
+            </div>
 
             <!-- Dropdown -->
             <div x-data="{ startY: 0, scrollTop: 0 }"
@@ -32,75 +32,71 @@
               x-ref="list">
               <ul class="justify-between items-center w-48">
                 <li>
-                  <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Depression
+                  <a href="{% url 'depression' %}" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Depression
                     <span>›</span></a>
                 </li>
                 <li>
-                  <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Eating Disorder
+                  <a href="{% url "eating_disorder" %}" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Eating Disorder
                     <span>›</span></a>
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="{% url "hypochondriasis" %}"
                     class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Hypochondriasis<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Mood
+                  <a href="{% url "mood_disorder" %}" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Mood
                     Disorder<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="{% url "ocd" %}"
                     class="hover:text-gray-500 py-2 flex justify-between items-center w-48">OCD<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="{% url "postpartum" %}"
                     class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Postpartum<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Personality
+                  <a href="{% url "personality" %}" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Personality
                     Disorder<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#"
-                    class="hover:text-gray-500 py-2 flex justify-between items-center w-48">PTD<span>›</span></a>
-                </li>
-                <li>
-                  <a href="#"
+                  <a href="{% url "phobia" %}"
                     class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Phobia<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="{% url "psychosis" %}"
                     class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Psychosis<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="{% url "ptsd" %}"
                     class="hover:text-gray-500 py-2 flex justify-between items-center w-48">PTSD<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="{% url "schizophrenia" %}"
                     class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Schizophrenia<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="{% url "adhd" %}"
                     class="hover:text-gray-500 py-2 flex justify-between items-center w-48">ADHD<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="{% url "autistic" %}"
                     class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Autistic<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="{% url "abuse" %}"
                     class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Abuse<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="{% url "addiction" %}"
                     class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Addiction<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="{% url "self_regulation" %}"
                     class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Self-Regulation<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="{% url "lgbtq" %}"
                     class="hover:text-gray-500 py-2 flex justify-between items-center w-48">LGBTQ<span>›</span></a>
                 </li>
               </ul>
@@ -122,35 +118,35 @@
             <div class="nav-drop absolute group text-sm top-full left-0 w-max opacity-0 invisible group-hover:visible group-hover:translate-y-2 transition-all duration-300 ease-in-out transform flex-col group-hover:opacity-100 bg-white dark:bg-charcoal rounded-[25px] shadow-lg px-6 py-4 text-left space-y-4">
               <ul class="justify-between items-center w-48">
                 <li>
-                  <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Crisis
+                  <a href="{% url "crisis_intervention" %}" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Crisis
                     Intervention<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Extential
+                  <a href="{% url "existential_crisis" %}" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Extential
                     Crisis<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="{% url "trauma" %}"
                     class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Trauma<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Chronic
+                  <a href="{% url "chronic_illness" %}" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Chronic
                     Illness<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Suicidal
+                  <a href="{% url "suicidal_tendencies" %}" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Suicidal
                     Tendencies<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="{% url "burnout" %}"
                     class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Burnout<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Boosting
+                  <a href="{% url "boosting_productivity" %}" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Boosting
                     Productivity<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Career
+                  <a href="{% url "career_coaching" %}" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Career
                     Coaching<span>›</span></a>
                 </li>
               </ul>
@@ -173,23 +169,23 @@
               class="nav-drop absolute group text-sm top-full left-0 w-max opacity-0 invisible group-hover:visible group-hover:translate-y-2 transition-all duration-300 ease-in-out transform flex-col group-hover:opacity-100 bg-white dark:bg-charcoal rounded-[25px] shadow-lg px-6 py-4 text-left space-y-4">
               <ul class="justify-between items-center w-48">
                 <li>
-                  <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Couples
+                  <a href="{% url "couples_counselling" %}" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Couples
                     Counselling<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Divorce
+                  <a href="{% url "divorce_counselling" %}" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Divorce
                     Counselling<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Family
+                  <a href="{% url "family_counselling" %}" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Family
                     Counselling<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Infertillity
+                  <a href="{% url "infertility_counselling" %}" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Infertillity
                     Counselling<span>›</span></a>
                 </li>
                 <li>
-                  <a href="#" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Sexual
+                  <a href="{% url "parental_counselling" %}" class="hover:text-gray-500 py-2 flex justify-between items-center w-48">Sexual
                     Intimacy<span>›</span></a>
                 </li>
               </ul>
@@ -281,4 +277,4 @@
     </aside>
   </div>
 </div>
-<div class="md:h-24 h-22 w-full"></div>
+

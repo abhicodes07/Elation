@@ -1,0 +1,149 @@
+{% extends 'elationapp/layout.html' %}
+{% load static %}
+
+{% block content %}
+  <section class="w-full">
+    {% comment %}For larger screens{% endcomment %}
+    <div class="lg:block hidden md:h-28 h-22"></div>
+    <section class="lg:grid hidden grid-cols-2 gap-6 h-[70vh]">
+      <div class="grid place-content-center px-12 gap-6">
+        {% block heading_large_screen %}
+          <h1 class="text-[#094C9F] dark:text-navy-light text-5xl tracking-wide poppins-regular">Best Treatment for Depression That Guides You to Healing</h1>
+          <blockquote class="poppins-regular text-vagus text-base dark:text-warp-blockquote">Depression is a persistent medical condition that can significantly impact your... read more</blockquote>
+        {% endblock %}
+        <a href="/" class="text-[#094C9F] text-md inline-flex gap-2 items-center dark:text-navy-light poppins-medium">
+          Take Test<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-[#094C9F] dark:text-navy-light">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+          </svg>
+        </a>
+      </div>
+      {% block header_img_large_screen %}
+        <div class="flex items-end h-full w-full">
+          <img src="{% static 'assets/disorder/depression3.jpg' %}" alt="depression" class="object-fill h-full object-center md:[clip-path:ellipse(70%_50%_at_80%_50%)]" />
+        </div>
+      {% endblock %}
+    </section>
+
+    {% comment %}for mobile devices{% endcomment %}
+    {% block header_img_small_screen %}
+      <div class="lg:hidden h-[33rem] bg-top md:bg-contain bg-fill bg-fixed bg-no-repeat" style="background-image: url({% static 'assets/disorder/depression3.jpg' %});"></div>
+    {% endblock %}
+  </section>
+
+  <!--  -->
+  <section class="w-full flex justify-center relative z-0">
+    <div id="fixed-section" class="lg:hidden max-w-3xl absolute z-10 flex flex-wrap bg-white gap-2 mx-4 rounded-4xl p-8 items-center -translate-y-15 transition-colors ease-in-out duration-500 dark:bg-navy-dark">
+      {% block card_headings %}
+        <h3 class="text-[#094C9F] sm:text-3xl text-2xl tracking-wide poppins-regular dark:text-navy-light">Best Treatment for Depression That Guides You to Healing</h3>
+        <blockquote class="poppins-regular text-vagus text-md dark:text-warp-blockquote">Depression is a persistent medical condition that can significantly impact your... read more</blockquote>
+      {% endblock %}
+      <a href="/" class="text-[#094C9F] inline-flex gap-2 items-center text-md dark:text-navy-light poppins-medium">
+        Take Test<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-[#094C9F] dark:text-navy-light">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <div class="lg:hidden block w-full" id="spacer"></div>
+  <section class="grid grid-cols-1 w-full gap-4 transition-colors duration-500 ease-in-out">
+    {% block svg_section %}
+      <div class="lg:order-2 order-1 w-full flex md:justify-center lg:gap-50 md:gap-20 justify-between px-8 py-5 bg-[#E9F3FF] dark:bg-navy-dark">
+        <div class="grid gap-2 justify-center items-center poppins-medium">
+          <div class="w-full flex justify-center">
+            <img src="{% static 'assets/svgs/depression.png' %}" alt="" class="h-10 w-10" />
+          </div>
+          <p class="text-vagus text-sm dark:text-warp-blockquote">Feeling of sadness</p>
+        </div>
+        <div class="grid justify-center items-center poppins-medium">
+          <div class="w-full flex justify-center">
+            <img src="{% static 'assets/svgs/thinking.png' %}" alt="" class="h-10 w-10" />
+          </div>
+          <p class="text-vagus text-sm dark:text-warp-blockquote">Loss of interest</p>
+        </div>
+        <div class="sm:grid hidden justify-center items-center poppins-medium">
+          <div class="w-full flex justify-center">
+            <img src="{% static 'assets/svgs/sleep-disorder.png' %}" alt="" class="h-10 w-10" />
+          </div>
+          <p class="text-vagus text-sm dark:text-warp-blockquote">Having sleep disorders</p>
+        </div>
+      </div>
+    {% endblock %}
+    <div class="lg:order-1 order-2 flex lg:justify-end justify-center lg:px-8 lg:py-10 px-4 py-5">
+      <a href="/" id="fr-cnslt-btn" class="w-md">
+        <button type="button" class="w-full cursor-pointer flex justify-center items-center gap-2 px-4 py-2.5 rounded-lg bg-[#094C9F] hover:bg-[#063a78] text-white text-sm md:text-base poppins-medium shadow-md shadow-blue-200 hover:shadow-lg transition duration-300 ease-in-out dark:text-warp-heading dark:shadow-none dark:hover:shadow-none">
+          Get Free Consultation<svg width="26" height="17" viewBox="0 0 30 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M28.083 3.78149C27.1335 3.27149 25.9815 3.32549 25.0815 3.92249L20.5665 6.92249C20.2665 3.26699 17.2305 0.375 13.5 0.375H7.5C3.5715 0.375 0.375 3.5715 0.375 7.5V13.5C0.375 17.4285 3.5715 20.625 7.5 20.625H13.5C17.2305 20.625 20.2665 17.733 20.5665 14.0775L25.0815 17.079C25.572 17.403 26.1345 17.5681 26.7 17.5681C27.174 17.5681 27.6495 17.4525 28.083 17.22C29.034 16.71 29.625 15.7214 29.625 14.6429V6.35852C29.625 5.27852 29.034 4.29149 28.083 3.78149ZM18.375 13.5015C18.375 16.1895 16.188 18.3765 13.5 18.3765H7.5C4.812 18.3765 2.625 16.1895 2.625 13.5015V7.50146C2.625 4.81346 4.812 2.62646 7.5 2.62646H13.5C16.188 2.62646 18.375 4.81346 18.375 7.50146V13.5015ZM27.375 14.6429C27.375 15.0074 27.126 15.1799 27.0195 15.2369C26.9115 15.2954 26.6325 15.4049 26.3265 15.2054L20.625 11.4164V9.58502L26.3265 5.79602C26.6325 5.59352 26.913 5.70588 27.0195 5.76288C27.126 5.81988 27.375 5.99256 27.375 6.35706V14.6429Z" fill="#FEFEFE" />
+          </svg>
+        </button>
+      </a>
+    </div>
+  </section>
+
+  <section class="grid grid-cols-1 gap-18 w-full lg:px-50 lg:py-20 md:px-25 md:py-10 p-10">
+    {% block first_article %}
+      <article class="poppins-regular grid gap-8 text-vagus dark:text-warp-blockquote">
+        <p class="text-pretty text-justify">Depression is a persistent medical condition that affects your thoughts, emotions, and daily life—but help is available. With the right therapy and support, you can regain control, find clarity, and restore your well-being. You are not alone, and healing is possible.</p>
+        <p class="text-pretty text-justify">Some of the common symptoms are constant feeling of sorrow, fatigue, difficulty focusing on important tasks, loss of interest, and changes in appetite and sleeping patterns.</p>
+        <p class="text-pretty text-justify">If left unaddressed, these symptoms can deeply impact relationships, work, and overall well-being. Whether you're experiencing mild discomfort or overwhelming emotional distress, recognizing the signs and seeking professional support is essential.</p>
+      </article>
+    {% endblock %}
+
+    {% block second_article %}
+      <article class="poppins-regular grid gap-8 text-vagus dark:text-warp-blockquote">
+        <h2 class="text-[#094C9F] text-2xl poppins-medium dark:text-navy-light">Why Choose Elation Mind Health is Best for Depression Treatment ?</h2>
+        <p class="text-pretty text-justify">We are committed to providing high-quality services to people who are looking for the best depression treatment clinics.</p>
+        <div>
+          <h3 class="text-vagus-blue poppins-semibold text-md dark:text-warp-heading">Experienced and Licensed Therapists</h3>
+          <p class="text-pretty text-justify">Our licensed and experienced therapists use proven techniques to help you navigate depression with confidence.</p>
+        </div>
+        <div>
+          <h3 class="text-vagus-blue poppins-semibold text-md dark:text-warp-heading">Immediate Appointments (Available Within 24 Hours)</h3>
+          <p class="text-pretty text-justify">Get matched with a therapist and start your journey within 24 hours—because your mental health shouldn’t wait.</p>
+        </div>
+        <div>
+          <h3 class="text-vagus-blue poppins-semibold text-md dark:text-warp-heading">Confidential and Secure Online Sessions</h3>
+          <p class="text-pretty text-justify">Your privacy is our top-most priority. That’s why your sessions at our depression therapy clinic in Dubai are designed to be 100% confidential and secure. Moreover, you can get in touch with our depression therapists from the comfort of your home, making it convenient and stress free.</p>
+        </div>
+      </article>
+    {% endblock %}
+
+    {% block review_card %}
+    <div class="w-full md:px-10 md:py-8">
+      <div class="bg-[#E9F3FF] rounded-4xl dark:bg-navy-dark md:p-8 p-6 grid justify-center gap-2 lg:flex lg:gap-10">
+        <div class="lg:hidden flex justify-center">
+          <img src="{% static 'assets/people/someone.jpg' %}" alt="Jessie" class="object-center rounded-full object-cover h-32 w-32" />
+        </div>
+        <img src="{% static 'assets/people/someone.jpg' %}" alt="Jessie" class="lg:block hidden object-center rounded-full object-cover h-32 w-32" />
+        <div class="grid text-pretty text-justify gap-2 place-content-center">
+          <h3 class="poppins-semibold text-vagus-blue dark:text-warp-heading lg:text-left text-center">Jessie, Housemaker</h3>
+          <p class="poppins-regular text-vagus dark:text-warp-blockquote">As a homemaker, I felt trapped in an endless cycle of exhaustion and sadness. Therapy with Vagus Mind Health helped me rediscover joy in the little things and regain control of my life.</p>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+
+    {% block third_article %}
+      <article class="poppins-regular grid gap-8 text-vagus dark:text-warp-blockquote">
+        <h2 class="text-[#094C9F] text-2xl poppins-medium dark:text-navy-light">What to Expect in Your First Session of Depression Therapy ?</h2>
+        <p class="text-pretty text-justify">We are committed to providing high-quality services to people who are looking for the best depression treatment clinics.</p>
+        <ol class="poppins-semibold list-decimal grid gap-8 list-inside text-vagus-blue dark:text-warp-heading">
+          <li>
+            Initial assessment<p class="poppins-regular text-vagus dark:text-warp-blockquote text-pretty text-justify">At the beginning of the session, we engage in an open conversation about your experiences, challenges, and emotions. This allows your therapist to gain insight into your situation and determine the best support for you.</p>
+          </li>
+          <li>
+            Set Personalized Therapy Goals<p class="poppins-regular text-vagus dark:text-warp-blockquote text-pretty text-justify">In the second step of your depression treatment, you will set goals with your therapist.</p>
+          </li>
+          <li>
+            Discuss Your Tailored Care Plan<p class="poppins-regular text-vagus dark:text-warp-blockquote text-pretty text-justify">Your therapist will outline a customized care plan designed to meet your unique needs and recovery goals.</p>
+          </li>
+        </ol>
+      </article>
+    {% endblock %}
+  </section>
+
+  {% comment %}footer{% endcomment %}
+  {% include 'elationapp/components/accordion.html' %}
+  {% include 'elationapp/components/help_banner.html' %}
+  {% include 'elationapp/components/footer.html' %}
+{% endblock %}

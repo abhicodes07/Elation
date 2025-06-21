@@ -18,16 +18,13 @@
   </head>
 
   <body class="bg-white text-gray-800 transition-colors duration-500 ease-in-out dark:bg-charcoal">
-    {% include 'elationapp/components/navbar.html' %}
+    {% comment %} {% include 'elationapp/components/navbar.html' %} {% endcomment %}
 
     {% comment %}Main{% endcomment %}
     {% block content %}
 
     {% endblock %}
-
-    {% include 'elationapp/components/help_banner.html' %}
-    {% include 'elationapp/components/footer.html' %}
-
+    
     {% block scripts %}
       <script src="{% static 'javascript/script.js' %}" defer></script>
     {% endblock %}
