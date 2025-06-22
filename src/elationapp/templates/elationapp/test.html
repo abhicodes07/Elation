@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     {% tailwind_css %}
   </head>
-  
-  <body class="bg-linear-to-bl from-violet-500 to-fuchsia-500">
+
+  <body class="bg-white transition-colors duration-500 ease-in-out">
     <!-- ========= HEADER ========= -->
     <header class="w-full h-fit lg:px-5 p-3 fixed z-50">
       <div class="w-full md:h-18 h-16">
-        <nav class="bg-gray-300/30 rounded-lg lg:m-auto lg:flex lg:justify-between lg:h-18 h-16 items-center transition-colors duration-500 ease-in-out dark:bg-[#292929] dark:backdrop-blur-2xl nav__bar">
+        <nav class="rounded-lg lg:m-auto lg:flex lg:justify-between lg:h-18 h-16 items-center transition-colors duration-500 ease-in-out dark:bg-[#292929] dark:backdrop-blur-2xl nav__bar" id="nav-bar">
           {% comment %}Logo{% endcomment %}
           <div class="lg:flex-none flex items-center justify-between h-full p-4">
             <a class="flex items-center" href="{% url '' %}">
@@ -49,8 +49,8 @@
           </div>
 
           <!-- NAV-LINKS -->
-          <div class="lg:relative lg:w-max lg:h-full lg:px-2 z-10 w-full flex nav__menu" id="nav-menu">
-            <ul class="flex flex-col lg:p-0 lg:items-center lg:h-full lg:flex-row xs:gap-1 lg:gap-0 poppins-medium xl:text-sm lg:text-[12px] lg:bg-transparent h-fit w-full rounded-xl bg-gray-300/30 p-4 text-vagus nav__list">
+          <div class="lg:w-max lg:h-full lg:px-2 z-10 w-full flex nav__menu" id="nav-menu">
+            <ul class="flex flex-col lg:p-0 lg:items-center lg:h-full lg:flex-row xs:gap-1 lg:gap-0 poppins-medium xl:text-sm lg:text-[12px] lg:bg-transparent h-fit w-full rounded-xl p-4 text-vagus nav__list" id="nav-list">
               <li class="h-full">
                 <a href="#" class="lg:h-full items-center lg:hover:bg-transparent hover:bg-gray-300/30 rounded-lg ease-in-out transition-colors duration-300 p-2 flex w-full">Home</a>
               </li>
@@ -64,10 +64,10 @@
                 </div>
 
                 <div class="lg:absolute dropdown__menu">
-                  <ul class="lg:bg-gray-300/50 lg:rounded-b-2xl lg:backdrop-blur-md lg:group-hover:p-2 lg:w-max w-full">
+                  <ul class="lg:rounded-b-2xl lg:backdrop-blur-sm lg:group-hover:p-2 lg:w-max w-full text-vagus nav__drop" id="nav-drop">
                     {% for key, value in specific.items %}
                       <li>
-                        <a href="{% url key %}" class="hover:bg-gray-300/30 transition-colors duration-300 rounded-lg lg:px-4 lg:py-2 pl-5 p-2 w-full flex dropdown__link">{{ value }}</a>
+                        <a href="{% url key %}" class="hover:bg-black/20 transition-colors duration-300 rounded-lg lg:px-4 lg:py-2 pl-5 p-2 w-full flex dropdown__link">{{ value }}</a>
                       </li>
                     {% endfor %}
                   </ul>
@@ -83,10 +83,10 @@
                 </div>
 
                 <div class="lg:absolute dropdown__menu">
-                  <ul class="lg:bg-gray-300/50 lg:rounded-b-2xl lg:backdrop-blur-md lg:group-hover:p-2 lg:w-max w-full text-vagus">
+                  <ul class="lg:rounded-b-2xl lg:backdrop-blur-sm lg:group-hover:p-2 lg:w-max w-full text-vagus nav__drop" id="nav-drop">
                     {% for key, value in life_work.items %}
                       <li>
-                        <a href="{% url key %}" class="hover:bg-gray-300/30 transition-colors duration-300 rounded-lg lg:px-4 lg:py-2 pl-5 p-2 w-full flex dropdown__link">{{ value }}</a>
+                        <a href="{% url key %}" class="hover:bg-black/20 transition-colors duration-300 rounded-lg lg:px-4 lg:py-2 pl-5 p-2 w-full flex dropdown__link">{{ value }}</a>
                       </li>
                     {% endfor %}
                   </ul>
@@ -102,10 +102,10 @@
                 </div>
 
                 <div class="lg:absolute dropdown__menu">
-                  <ul class="lg:bg-gray-300/50 lg:backdrop-blur-md lg:rounded-b-2xl lg:group-hover:p-2 lg:w-max w-full text-vagus">
+                  <ul class="lg:backdrop-blur-sm lg:rounded-b-2xl lg:group-hover:p-2 lg:w-max w-full text-vagus nav__drop" id="nav-drop">
                     {% for key, value in relationship.items %}
                       <li>
-                        <a href="{% url key %}" class="hover:bg-gray-300/30 transition-colors duration-300 rounded-lg lg:px-4 lg:py-2 pl-5 p-2 w-full flex dropdown__link">{{ value }}</a>
+                        <a href="{% url key %}" class="hover:bg-black/20 transition-colors duration-300 rounded-lg lg:px-4 lg:py-2 pl-5 p-2 w-full flex dropdown__link">{{ value }}</a>
                       </li>
                     {% endfor %}
                   </ul>
@@ -172,12 +172,68 @@
     <h1 class="text-7xl text-charcoal poppins flex justify-center">THIS IS A TEST HEADING FOR NOW</h1>
     <h1 class="text-7xl text-charcoal poppins flex justify-center">THIS IS A TEST HEADING FOR NOW</h1>
 
-    <div style="background-image: url('https://picsum.photos/600/400'); background-size: cover;">
+    {% comment %} <div style="background-image: url('https://picsum.photos/600/400'); background-size: cover;">
       <div class="blurred-box">
         <h2>Hello World</h2>
         <p>This box has a blurred background.</p>
       </div>
-    </div>
+    </div> {% endcomment %}
+
+    <!-- Here comes the image cards -->
+    <div class="md:h-24 h-22 w-full"></div>
+    <!--  -->
+    <section class="text-center px-5 py-5 grid grid-cols-1 gap-6">
+      <div class="grid grid-cols-1 gap-2">
+        <h1 class="text-4xl md:text-[66px] tracking-wide playfair-display-regular text-[#094C9F] dark:text-[#094C9F]">The Best Online Platform for Mental Health</h1>
+      </div>
+
+      <div class="flex flex-wrap justify-center vagus-color md:gap-8 gap-6 md:p-0 p-4 dark:text-warp-heading">
+        <!-- Teenagers 13–17 -->
+        <div class="card transition duration-700 hover:scale-105 ease-in-out cursor-pointer flex w-screen h-[58px] md:block md:w-[208px] md:h-[266px] rounded-2xl bg-[#D88D95]/20 poppins-regular md:text-center md:p-3 overflow-hidden" data-color="#F6E7E9">
+          <img src="{% static 'assets/teenagers_1.jpg' %}" alt="Teenagers 13–17" class="w-[58px] h-[58px] md:w-auto md:h-auto transform md:scale-100 transition-all duration-300 md:transform-none rounded-[16px] mb-4" />
+          <div class="flex-1 py-2 md:py-0 md:block md:mb-4 text-center">
+            <h3 class="text-base md:text-[18px]">Teenagers</h3>
+            <p class="text-[12px] md:text-sm text-vagus/60 dark:text-warp-blockquote">Therapy for 13–17</p>
+          </div>
+        </div>
+
+        <!-- Couples -->
+        <div class="card transition duration-700 hover:scale-105 ease-in-out cursor-pointer flex w-screen h-[58px] md:block md:w-[208px] md:h-[266px] rounded-2xl bg-[#F7BF44]/20 poppins-regular md:text-center md:p-3 overflow-hidden" data-color="#FDF1D9">
+          <img src="{% static 'assets/couples.jpg' %}" alt="Couples" class="w-[58px] h-[58px] md:w-auto md:h-auto object-cover transform md:scale-100 transition-all duration-300 md:transform-none rounded-[16px] mb-4" />
+          <div class="flex-1 py-2 md:py-0 md:block md:mb-4 text-center">
+            <h3 class="text-base md:text-[18px]">Couples</h3>
+            <p class="text-[12px] md:text-sm text-vagus/60 dark:text-warp-blockquote">Therapy for us</p>
+          </div>
+        </div>
+
+        <!-- Teenagers 18+ -->
+        <div class="card transition duration-700 hover:scale-105 ease-in-out cursor-pointer flex w-screen h-[58px] md:block md:w-[208px] md:h-[266px] rounded-2xl bg-[#4CC6EB]/20 poppins-regular md:text-center md:p-3 overflow-hidden" data-color="#DAF3FA">
+          <img src="{% static 'assets/teenagers_2.jpg' %}" alt="Teenagers 18+" class="w-[58px] h-[58px] md:w-auto md:h-auto object-cover transform md:scale-100 transition-all duration-300 md:transform-none rounded-[16px] mb-4" />
+          <div class="flex-1 py-2 md:py-0 md:block md:mb-4 text-center">
+            <h3 class="text-base md:text-[18px]">Teenagers</h3>
+            <p class="text-[12px] md:text-sm text-vagus/60 dark:text-warp-blockquote">Therapy for 18+</p>
+          </div>
+        </div>
+
+        <!-- Elderly -->
+        <div class="card transition duration-700 hover:scale-105 ease-in-out cursor-pointer flex w-screen h-[58px] md:block md:w-[208px] md:h-[266px] rounded-2xl bg-[#6DB848]/20 poppins-regular md:text-center md:p-3 overflow-hidden" data-color="#E1F0DA">
+          <img src="{% static 'assets/elderly.jpg' %}" alt="Elderly" class="w-[60px] h-[58px] md:w-auto md:h-auto object-fill transform md:scale-100 transition-all duration-300 md:transform-none rounded-[16px] mb-4" />
+          <div class="flex-1 py-2 md:py-0 md:block md:mb-4 text-center">
+            <h3 class="text-base md:text-[18px]">Elderly</h3>
+            <p class="text-[12px] md:text-sm text-vagus/60 dark:text-warp-blockquote">Therapy for 50+</p>
+          </div>
+        </div>
+
+        <!-- LGBTQ+ -->
+        <div class="card transition duration-700 hover:scale-105 ease-in-out cursor-pointer flex w-screen h-[58px] md:block md:w-[208px] md:h-[266px] rounded-2xl bg-[#6F7496]/20 poppins-regular md:text-center md:p-3 overflow-hidden" data-color="#E1E2E9">
+          <img src="{% static 'assets/lgbtq.jpg' %}" alt="LGBTQ+" class="w-[58px] h-[58px] md:w-auto md:h-auto object-fill transform md:scale-100 transition-all duration-300 md:transform-none rounded-[16px] mb-4" />
+          <div class="flex-1 py-2 md:py-0 md:block md:mb-4 text-center">
+            <h3 class="text-base md:text-[18px]">LGBTQ+</h3>
+            <p class="text-[12px] md:text-sm text-vagus/60 dark:text-warp-blockquote">Therapy for LGBTQ+</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script>
       // ============ SHOW MENU FOR MOBILE DEVICES ============
@@ -195,5 +251,6 @@
       }
       showMenu('nav-toggle', 'nav-menu')
     </script>
+    <script src="{% static 'javascript/test.js' %}"></script>
   </body>
 </html>

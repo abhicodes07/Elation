@@ -242,15 +242,3 @@ adjustSpacerHeight()
 
 // Re-adjust on window resize (responsive)
 window.addEventListener("resize", adjustSpacerHeight);
-
-// ============ HEIGHT RE-ADJUSTMENT FOR PSEUDO ELEMENT IN HEADER TO FIT NAV-BAR ============
-function pseudoElementHeight() {
-  const nav = document.querySelector(".nav__bar");
-  const width = nav.offsetWidth + "px";
-  const height = nav.offsetHeight + "px";
-  nav.style.setProperty('--nav-width', width);
-  nav.style.setProperty('--nav-height', height);
-}
-
-pseudoElementHeight();
-window.addEventListener("resize", pseudoElementHeight);
