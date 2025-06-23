@@ -14,11 +14,10 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
     {% tailwind_css %}
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   </head>
 
-  <body class="bg-white text-gray-800 transition-colors duration-500 ease-in-out dark:bg-charcoal">
-    {% comment %} {% include 'elationapp/components/navbar.html' %} {% endcomment %}
+  <body class="bg-white transition-colors duration-500 ease-in-out dark:bg-charcoal">
+    {% include 'elationapp/components/navbar.html' %}
 
     {% comment %}Main{% endcomment %}
     {% block content %}
@@ -26,7 +25,8 @@
     {% endblock %}
     
     {% block scripts %}
-      <script src="{% static 'javascript/script.js' %}" defer></script>
+      <script src="{% static 'javascript/script.js' %}"></script>
+      <script src="{% static 'javascript/animations.js' %}"></script>
     {% endblock %}
   </body>
 </html>

@@ -193,50 +193,50 @@ def infertility_counselling(request, *args, **kwargs):
 def parental_counselling(request, *args, **kwargs):
     return render(request, "elationapp/pages/Relationship/sexual_intimacy.html")
 
-def test(request, *args, **kwargs):
-    specific_disorder = {
-        'abuse' : 'Abuse',
-        'addiction' : 'Addiction',
-        'adhd' : 'ADHD',
-        'autistic' : 'Autistic',
-        'depression' : 'Depression',
-        'eating_disorder' : 'Eating Disorder',
-        'hypochondriasis' : 'Hypochondriasis',
-        'lgbtq' : 'LGBTQ+',
-        'mood_disorder' : 'Mood Disorder',
-        'ocd' : 'OCD',
-        'personality' : 'Personality Disorder',
-        'phobia' : 'Phobia',
-        'postpartum' : 'Postpartum',
-        'psychosis' : 'Psychosis',
-        'ptsd' : 'PTSD',
-        'schizophrenia' : 'Schizophrenia',
-        'self_regulation' : 'Self Regulation'
-    }
+# def test(request, *args, **kwargs):
+#     specific_disorder = {
+#         'abuse' : 'Abuse',
+#         'addiction' : 'Addiction',
+#         'adhd' : 'ADHD',
+#         'autistic' : 'Autistic',
+#         'depression' : 'Depression',
+#         'eating_disorder' : 'Eating Disorder',
+#         'hypochondriasis' : 'Hypochondriasis',
+#         'lgbtq' : 'LGBTQ+',
+#         'mood_disorder' : 'Mood Disorder',
+#         'ocd' : 'OCD',
+#         'personality' : 'Personality Disorder',
+#         'phobia' : 'Phobia',
+#         'postpartum' : 'Postpartum',
+#         'psychosis' : 'Psychosis',
+#         'ptsd' : 'PTSD',
+#         'schizophrenia' : 'Schizophrenia',
+#         'self_regulation' : 'Self Regulation'
+#     }
 
-    life_work = {
-        'boosting_productivity' : 'Boosting Productivity',
-        'burnout' : 'Burnout',
-        'career_coaching' : 'Career Coaching',
-        'chronic_illness' : 'Chronic Illness',
-        'crisis_intervention' : 'Crisis Intervention',
-        'existential_crisis' : 'Existential Crisis',
-        'suicidal_tendencies' : 'Suicidal Tendencies',
-        'trauma' : 'Trauma',
-    }
+#     life_work = {
+#         'boosting_productivity' : 'Boosting Productivity',
+#         'burnout' : 'Burnout',
+#         'career_coaching' : 'Career Coaching',
+#         'chronic_illness' : 'Chronic Illness',
+#         'crisis_intervention' : 'Crisis Intervention',
+#         'existential_crisis' : 'Existential Crisis',
+#         'suicidal_tendencies' : 'Suicidal Tendencies',
+#         'trauma' : 'Trauma',
+#     }
 
-    relationship = {
-        'couples_counselling' : "Couples Counselling",
-        'divorce_counselling' : "Divorce Counselling",
-        'family_counselling' : "Family Counselling",
-        'infertility_counselling' : "Infertility Counselling",
-        'parental_counselling' : "Sexual Intimacy",
-    }
+#     relationship = {
+#         'couples_counselling' : "Couples Counselling",
+#         'divorce_counselling' : "Divorce Counselling",
+#         'family_counselling' : "Family Counselling",
+#         'infertility_counselling' : "Infertility Counselling",
+#         'parental_counselling' : "Sexual Intimacy",
+#     }
 
-    context = {
-        "relationship" : relationship,
-        "specific" : specific_disorder,
-        "life_work" : life_work,
-    }
+#     context = {
+#         "relationship" : relationship,
+#         "specific" : specific_disorder,
+#         "life_work" : life_work,
+#     }
 
-    return render(request, "elationapp/test.html", context=context)
+#     return render(request, "elationapp/test.html", context=context)
