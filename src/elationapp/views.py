@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from django.contrib import messages
 from pathlib import Path
+from .models import Advice
+from django.db.models import Q
 
 # Create your views here.
 def homepage(request, *args, **kwargs):
@@ -193,50 +196,27 @@ def infertility_counselling(request, *args, **kwargs):
 def parental_counselling(request, *args, **kwargs):
     return render(request, "elationapp/pages/Relationship/sexual_intimacy.html")
 
-# def test(request, *args, **kwargs):
-#     specific_disorder = {
-#         'abuse' : 'Abuse',
-#         'addiction' : 'Addiction',
-#         'adhd' : 'ADHD',
-#         'autistic' : 'Autistic',
-#         'depression' : 'Depression',
-#         'eating_disorder' : 'Eating Disorder',
-#         'hypochondriasis' : 'Hypochondriasis',
-#         'lgbtq' : 'LGBTQ+',
-#         'mood_disorder' : 'Mood Disorder',
-#         'ocd' : 'OCD',
-#         'personality' : 'Personality Disorder',
-#         'phobia' : 'Phobia',
-#         'postpartum' : 'Postpartum',
-#         'psychosis' : 'Psychosis',
-#         'ptsd' : 'PTSD',
-#         'schizophrenia' : 'Schizophrenia',
-#         'self_regulation' : 'Self Regulation'
-#     }
+# Advice room
+def advice_room(request, *args, **kwargs):
+    # Without default: request.GET.get('query') → None if missing
+    # With default: request.GET.get('query', '') → '' if missing
+    query = request.GET.get('query', '').strip().rstrip('/')
 
-#     life_work = {
-#         'boosting_productivity' : 'Boosting Productivity',
-#         'burnout' : 'Burnout',
-#         'career_coaching' : 'Career Coaching',
-#         'chronic_illness' : 'Chronic Illness',
-#         'crisis_intervention' : 'Crisis Intervention',
-#         'existential_crisis' : 'Existential Crisis',
-#         'suicidal_tendencies' : 'Suicidal Tendencies',
-#         'trauma' : 'Trauma',
-#     }
+    if query:
+        # here | means OR
+        advice = Advice.objects.filter(
+            Q(title__icontains=query) |
+            Q(description__icontains=query)
+        )
+        if len(advice) == 0:
+            messages.error(request, "0 advice found for ")
+        else:
+            messages.info(request, f"{len(advice)} results found for")
+    else:
+        advice = Advice.objects.all()
 
-#     relationship = {
-#         'couples_counselling' : "Couples Counselling",
-#         'divorce_counselling' : "Divorce Counselling",
-#         'family_counselling' : "Family Counselling",
-#         'infertility_counselling' : "Infertility Counselling",
-#         'parental_counselling' : "Sexual Intimacy",
-#     }
-
-#     context = {
-#         "relationship" : relationship,
-#         "specific" : specific_disorder,
-#         "life_work" : life_work,
-#     }
-
-#     return render(request, "elationapp/test.html", context=context)
+    context = {
+        "advice":advice,
+        "query":query,  
+    }
+    return render(request, "elationapp/advice_room.html", context=context)

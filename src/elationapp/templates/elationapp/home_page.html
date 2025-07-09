@@ -89,23 +89,7 @@
   </div>
 
   <!--  -->
-  <section id="fade-box" class="grid grid-cols-1 gap-2 px-5 py-7 items-center text-center">
-    <span class="poppins-regular font-medium text-vagus/80 dark:text-warp-subhead">Internationally certified specialists from</span>
-    <div class="w-full overflow-hidden cursor-pointer my-1">
-      <div class="logo inline-flex w-full">
-        <div class="logo-slide flex whitespace-nowrap w-max">
-          {% for logo in company_logos %}
-            <img src="{% static 'assets/associates/' %}{{ logo }}.png" alt="{{ logo }}-logo" class="md:w-44 md:h-16 w-40 h-16 inline-block" />
-          {% endfor %}
-          {% for logo in company_logos %}
-            <img src="{% static 'assets/associates/' %}{{ logo }}.png" alt="{{ logo }}-logo" class="lg:w-44 lg:h-16 w-40 h-16 inline-block" />
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!--  -->
+  {% include 'elationapp/components/slider.html' %}
   {% include 'elationapp/components/why_choose_section.html' %}
   {% include 'elationapp/components/reviews.html' %}
   {% include 'elationapp/components/how_we_work_section.html' %}

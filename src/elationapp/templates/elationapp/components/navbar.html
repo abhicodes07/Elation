@@ -11,7 +11,7 @@
           <img src="{% static 'assets/elation_white.png' %}" alt="Elation" class="lg:h-10 lg:w-30 h-8 w-24 hidden dark:block" />
         </a>
         <div class="flex items-center gap-3 transition-all duration-500 lg:hidden">
-          <a href="#" class="text-lg poppins-regular ease-in-out text-vagus dark:text-warp-heading dark:rounded-sm dark:hover:bg-warp-subhead/30">Login</a>
+          <a href="#" class="text-lg poppins-regular ease-in-out text-vagus dark:text-warp-heading dark:rounded-sm">Login</a>
 
           <button onclick="toggleDarkMode()" class="cursor-pointer mr-2 text-vagus dark:text-warp-heading dark:rounded-sm dark:hover:text-warp-heading dark:hover:rotate-90">
             {% comment %}sun{% endcomment %}
@@ -113,13 +113,13 @@
             <a href="#" class="p-2 lg:h-full lg:hover:bg-transparent hover:bg-black/20 items-center rounded-lg ease-in-out flex w-full">Business</a>
           </li>
           <li class="h-full">
-            <a href="#" class="p-2 lg:h-full lg:hover:bg-transparent hover:bg-black/20 items-center rounded-lg ease-in-out flex w-full">The Advice Room</a>
+            <a href="{% url "advice_room" %}" class="p-2 lg:h-full lg:hover:bg-transparent hover:bg-black/20 items-center rounded-lg ease-in-out flex w-full">The Advice Room</a>
           </li>
         </ul>
       </div>
 
       <div class="lg:flex items-center gap-3 transition-colors duration-500 hidden">
-        <a href="#" class="text-lg poppins-regular ease-in-out text-vagus dark:text-warp-heading dark:rounded-sm dark:hover:bg-warp-subhead/30">Login</a>
+        <a href="#" class="text-lg poppins-regular ease-in-out text-vagus dark:text-warp-heading dark:rounded-sm">Login</a>
 
         <button onclick="toggleDarkMode()" class="cursor-pointer mr-2 text-vagus dark:text-warp-heading dark:rounded-sm dark:hover:text-warp-heading dark:hover:rotate-90">
           {% comment %}sun{% endcomment %}

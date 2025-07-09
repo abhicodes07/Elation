@@ -36,4 +36,6 @@ urlpatterns = [
     path("Infertility-counselling/", views.infertility_counselling, name="infertility_counselling"),
     path("Parental-counselling/", views.parental_counselling, name="parental_counselling"),
     # path("test/", views.test, name="test"),
+
+    path("Advice-room/", views.advice_room, name="advice_room"),
 ]

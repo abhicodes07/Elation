@@ -1,0 +1,57 @@
+{% extends 'elationapp/layout.html' %}
+{% load static %}
+
+{% block content %}
+  <section class="md:h-[100vh] h-[30rem] w-full flex flex-col gap-4 items-center justify-center bg-cover bg-no-repeat bg-center" style="background-image: url({% static 'assets/ashish.jpg' %});">
+    <div>
+      <h1 class="playfair-display-regular text-warp-heading tracking-wide lg:text-6xl text-4xl">Advice Room</h1>
+    </div>
+    <p class="md:text-base text-sm poppins-regular text-warp-heading md:w-3xl w-full text-center">Access expert-reviewed resources, tools, and tips to enhance your mental and emotional well-being, backed by our trusted specialists.</p>
+    <form method="get" action="" class="flex items-center bg-gray-200/50 backdrop-blur-sm rounded-full px-4 py-2 w-full max-w-lg mx-4" id="search-bar">
+      <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m1.15-5.65a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+      <input type="text" placeholder="Search for any topic" name="query" id="query" class="ml-3 bg-transparent focus:outline-none text-vagus/70 placeholder-gray-500 w-full" />
+    </form>
+  </section>
+
+  {% if messages %}
+    <ul class="messages p-4">
+      {% for message in messages %}
+        <li class="{{ message.tags }} text-vagus poppins-regular text-center text-xl dark:text-warp-heading">
+          {{ message }} <span class="poppins-semibold">"{{ query }}"</span>
+        </li>
+        {% if not advice %}
+        <li class="text-vagus poppins-regular text-center text-xl dark:text-warp-heading">Your search returned no matching records. Please refine your input and try again.</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <section class="flex flex-wrap gap-8 justify-center mx-auto px-8 py-12 lg:px-16 lg:py-16">
+    {% if advice %}
+      {% for a in advice %}
+        <div class="rounded-xl max-w-sm w-full shadow-xs shadow-vagus h-full flex flex-col col-3">
+          <div class="relative p-4 bg-cover bg-no-repeat bg-center lg:h-64 md:h-44 h-38 w-full rounded-t-xl" style="background-image: url({{ a.image.url }});">
+            <span class="absolute top-4 right-4 px-3 py-1.5 md:text-sm text-xs rounded-full poppins-regular bg-[#094C9F] text-white dark:text-warp-heading">{{ a.get_type_display }}</span>
+          </div>
+
+          <div class="p-4 flex flex-col justify-between gap-4">
+            <h1 class="text-[#094C9F] poppins-medium text-xl dark:text-warp-heading md:h-12 h-full">{{ a.title }}</h1>
+            <p class="text-vagus poppins-regular text-sm text-pretty mt-2 line-clamp-5 dark:text-warp-blockquote">{{ a.description }}</p>
+            <a href="#" class="w-fit">
+              <button type="button" class="cursor-pointer flex gap-2 items-center px-6 py-2 rounded-full bg-[#094C9F] hover:bg-[#063a78] text-white text-sm poppins-medium shadow-md shadow-blue-200 hover:shadow-lg transition duration-300 ease-in-out dark:text-warp-heading dark:shadow-none dark:hover:shadow-none">
+                Read More<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+                  <path fill-rule="evenodd" d="M12.78 7.595a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06l3.25 3.25Zm-8.25-3.25 3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06Z" clip-rule="evenodd" />
+                </svg>
+              </button>
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </section>
+
+  {% include 'elationapp/components/help_banner.html' %}
+  {% include 'elationapp/components/footer.html' %}
+{% endblock %}
