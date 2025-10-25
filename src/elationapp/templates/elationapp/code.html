@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MindWell - Your Path to a Healthier Mind</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#A2D2FF',
+              secondary: '#BDE0FE',
+              accent: '#FFB4A2',
+              'background-light': '#F7F7F7',
+              'background-dark': '#111c21',
+              'text-light': '#111518',
+              'text-dark': '#f8fafc',
+              neutral: '#E0E0E0'
+            },
+            fontFamily: {
+              display: ['Inter', 'sans-serif']
+            },
+            borderRadius: {
+              DEFAULT: '0.5rem',
+              lg: '0.75rem',
+              xl: '1rem',
+              full: '9999px'
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+      <div class="layout-container flex h-full grow flex-col">
+        <div class="flex flex-1 justify-center">
+          <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+            <main class="flex-grow">
+              <section class="py-10 px-4" id="hero">
+                <div class="container mx-auto">
+                  <div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-4 text-center" data-alt="Abstract calming image with soft blue and green gradients" style="
+                      background-image: linear-gradient(
+                          rgba(0, 0, 0, 0.2) 0%,
+                          rgba(0, 0, 0, 0.5) 100%
+                        ),
+                        url('https://lh3.googleusercontent.com/aida-public/AB6AXuA4NdH2gVZwCzLsZH-4YSOz1swMwc40ZTK0nXppiZ5GwoQCoNRVOSn77rgCjS3uO-wpAF3DrtqC9r4wSL1ga0WyRjEijsrXN0A2G-9SQANDQrW1hWobJTcdE52hyUtDctvVIiUgItb07H9Tz-IuAayVESGvLiafHT0SejzrkFqnFNE0Tgh-ooh0jj833Hlg6lkDS5QUmD3-b30i-Yr7DvOzfeBSijBryxsHFcLbWXnyQ78OkVy6J5MGjKno7haJiCa4PLvz_Pz6wh-d');
+                    ">
+                    <div class="flex flex-col gap-4">
+                      <h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-6xl">Your Path to a Healthier Mind</h1>
+                      <p class="text-white text-base font-normal leading-normal md:text-lg max-w-2xl mx-auto">Take the first step towards a more fulfilling life. We are here to support you on your journey.</p>
+                    </div>
+                    <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-colors"><span class="truncate">Get Started</span></button>
+                  </div>
+                </div>
+              </section>
+              <section class="py-20 px-4" id="services">
+                <div class="container mx-auto">
+                  <div class="flex flex-col gap-12">
+                    <div class="text-center">
+                      <h2 class="text-3xl font-bold leading-tight tracking-[-0.015em] text-text-light dark:text-text-dark">Our Services</h2>
+                      <p class="text-base font-normal leading-normal text-text-light/70 dark:text-text-dark/70 max-w-2xl mx-auto mt-2">We offer a range of services to meet your individual needs. Our team of experienced therapists is dedicated to providing compassionate and effective care.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                      <div class="flex flex-col gap-4 rounded-xl border border-neutral/50 dark:border-neutral/20 bg-white dark:bg-background-dark p-6 text-center items-center hover:shadow-lg transition-shadow">
+                        <span class="material-symbols-outlined text-primary text-4xl">person</span>
+                        <h3 class="text-lg font-bold leading-tight">Individual Therapy</h3>
+                        <p class="text-sm font-normal leading-normal text-text-light/70 dark:text-text-dark/70">Personalized one-on-one sessions to address your unique challenges and goals.</p>
+                        <a class="text-accent font-semibold text-sm mt-2" href="#">Learn More</a>
+                      </div>
+                      <div class="flex flex-col gap-4 rounded-xl border border-neutral/50 dark:border-neutral/20 bg-white dark:bg-background-dark p-6 text-center items-center hover:shadow-lg transition-shadow">
+                        <span class="material-symbols-outlined text-primary text-4xl">favorite</span>
+                        <h3 class="text-lg font-bold leading-tight">Couples Counseling</h3>
+                        <p class="text-sm font-normal leading-normal text-text-light/70 dark:text-text-dark/70">Strengthen your relationship and improve communication with our expert guidance.</p>
+                        <a class="text-accent font-semibold text-sm mt-2" href="#">Learn More</a>
+                      </div>
+                      <div class="flex flex-col gap-4 rounded-xl border border-neutral/50 dark:border-neutral/20 bg-white dark:bg-background-dark p-6 text-center items-center hover:shadow-lg transition-shadow">
+                        <span class="material-symbols-outlined text-primary text-4xl">groups</span>
+                        <h3 class="text-lg font-bold leading-tight">Family Therapy</h3>
+                        <p class="text-sm font-normal leading-normal text-text-light/70 dark:text-text-dark/70">Navigate family dynamics and build healthier connections with your loved ones.</p>
+                        <a class="text-accent font-semibold text-sm mt-2" href="#">Learn More</a>
+                      </div>
+                      <div class="flex flex-col gap-4 rounded-xl border border-neutral/50 dark:border-neutral/20 bg-white dark:bg-background-dark p-6 text-center items-center hover:shadow-lg transition-shadow">
+                        <span class="material-symbols-outlined text-primary text-4xl">diversity_3</span>
+                        <h3 class="text-lg font-bold leading-tight">Group Sessions</h3>
+                        <p class="text-sm font-normal leading-normal text-text-light/70 dark:text-text-dark/70">Find support and community in a safe and structured group setting.</p>
+                        <a class="text-accent font-semibold text-sm mt-2" href="#">Learn More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="py-20 px-4 bg-white dark:bg-background-dark" id="team">
+                <div class="container mx-auto">
+                  <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold leading-tight tracking-[-0.015em] text-text-light dark:text-text-dark">Meet Our Team</h2>
+                    <p class="text-base font-normal leading-normal text-text-light/70 dark:text-text-dark/70 max-w-2xl mx-auto mt-2">Our compassionate and experienced therapists are here to guide you.</p>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="text-center">
+                      <img alt="Headshot of Dr. Emily Carter" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" data-alt="Headshot of Dr. Emily Carter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH4U4JWttytslm9ciFjMS9Wu_Xz2PhcQkGrjLSMkIWfD2i7FroUHrVCJOWJFo6-3VKkPormqh_VbVqbcFi_RoP4RKTELRg9FDAg3fCpJPMTnHPaMXLOuu9R3gUUq6JvgFU7NolU-H-Can_09--Nxq9qZRMIsc5Ty13v_T_jvCe0r1Sjfh6zZKqJkVDYIcvHICdQC6LU58id63yKjZ2olEUpFdL9Mjgco8PqLRN2Sl8Fq_lJrCmiCET7bOgGkHiKXb4bNsLRgejTUoL" />
+                      <h3 class="text-lg font-bold">Dr. Emily Carter</h3>
+                      <p class="text-sm text-primary font-medium">Clinical Psychologist</p>
+                      <p class="text-sm mt-2 text-text-light/70 dark:text-text-dark/70">Specializes in cognitive-behavioral therapy and mindfulness-based approaches.</p>
+                    </div>
+                    <div class="text-center">
+                      <img alt="Headshot of Michael Chen" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" data-alt="Headshot of Michael Chen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrZM-FCiMiz9k2rd2iKr6IGe7HdSxCnKwHM4x6cJzIAC1yhzh9_abUVN8b3rueOe3OZVy8Fu5TLSXBRm9hY2XXQ2Z_RwSPwI66fMjZf841wMkidRQEVGta688RiVphVfMnh2TijUIWxpi7GbcOPAF_FMM-5uA5CfINZgQFHTzv7mzlVrCD4cOQ1T1HUXCvYW2boB0H3D55jTxh3VkPgo9dadmHAbiUVf3eZrMeGREV8lnNqOSVbeHfFe9SK8z2rFArE73LsBFXIaXI" />
+                      <h3 class="text-lg font-bold">Michael Chen, LCSW</h3>
+                      <p class="text-sm text-primary font-medium">Licensed Clinical Social Worker</p>
+                      <p class="text-sm mt-2 text-text-light/70 dark:text-text-dark/70">Focuses on relationship counseling and family systems therapy.</p>
+                    </div>
+                    <div class="text-center">
+                      <img alt="Headshot of Dr. Sarah Jenkins" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" data-alt="Headshot of Dr. Sarah Jenkins" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9KuMzwk5zn0vav7CuzrTurtmnDajwcpyTW30EgFfkaLM2pa_XZbLgeTBWytxdOSXc7kPAuMVEO-B0vzqmF0X8BtnuUu3TpxYO8jgXHFBXPvGKBln8CRbkDZ-oLp4esgydxbESz86C6eJ64Cg-j6ay160VfDE2FNILuEbztvSdSGbk0683sM1yCN3iON1ZPVZGJE6gjayKKrnRxhlw_535CGL4WQSZZVJlr_RQ-NMvSROepYiGdab7T4Wv2_v0eO64uFOiyWofUjoy" />
+                      <h3 class="text-lg font-bold">Dr. Sarah Jenkins</h3>
+                      <p class="text-sm text-primary font-medium">Psychiatrist</p>
+                      <p class="text-sm mt-2 text-text-light/70 dark:text-text-dark/70">Expert in medication management and holistic mental wellness.</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="py-20 px-4" id="testimonials">
+                <div class="container mx-auto">
+                  <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold leading-tight tracking-[-0.015em] text-text-light dark:text-text-dark">What Our Clients Say</h2>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-secondary/30 dark:bg-secondary/10 p-8 rounded-xl">
+                      <p class="text-text-light dark:text-text-dark italic">"MindWell provided me with the tools I needed to navigate a difficult time in my life. I'm forever grateful for their support."</p>
+                      <p class="mt-4 font-bold text-text-light dark:text-text-dark">- Alex P.</p>
+                    </div>
+                    <div class="bg-secondary/30 dark:bg-secondary/10 p-8 rounded-xl">
+                      <p class="text-text-light dark:text-text-dark italic">"The therapists are compassionate and truly listen. Counseling has made a huge difference in my relationship."</p>
+                      <p class="mt-4 font-bold text-text-light dark:text-text-dark">- Jessica L.</p>
+                    </div>
+                    <div class="bg-secondary/30 dark:bg-secondary/10 p-8 rounded-xl">
+                      <p class="text-text-light dark:text-text-dark italic">"I felt safe and understood from my very first session. Highly recommend to anyone seeking help."</p>
+                      <p class="mt-4 font-bold text-text-light dark:text-text-dark">- David R.</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="py-20 px-4 bg-white dark:bg-background-dark" id="contact">
+                <div class="container mx-auto">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div>
+                      <h2 class="text-3xl font-bold leading-tight tracking-[-0.015em] text-text-light dark:text-text-dark">Contact Us for a Consultation</h2>
+                      <p class="mt-4 text-text-light/70 dark:text-text-dark/70">Your journey to wellness starts here. Reach out to us to schedule your first appointment. We're here to help.</p>
+                    </div>
+                    <form class="space-y-6">
+                      <div>
+                        <label class="sr-only" for="name">Name</label>
+                        <input class="w-full rounded-lg border-neutral/50 dark:border-neutral/30 bg-background-light dark:bg-background-dark p-3 focus:ring-primary focus:border-primary" id="name" name="name" placeholder="Your Name" type="text" />
+                      </div>
+                      <div>
+                        <label class="sr-only" for="email">Email</label>
+                        <input class="w-full rounded-lg border-neutral/50 dark:border-neutral/30 bg-background-light dark:bg-background-dark p-3 focus:ring-primary focus:border-primary" id="email" name="email" placeholder="Your Email" type="email" />
+                      </div>
+                      <div>
+                        <label class="sr-only" for="message">Message</label>
+                        <textarea class="w-full rounded-lg border-neutral/50 dark:border-neutral/30 bg-background-light dark:bg-background-dark p-3 focus:ring-primary focus:border-primary" id="message" name="message" placeholder="Your Message" rows="4"></textarea>
+                      </div>
+                      <button class="w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-colors" type="submit"><span class="truncate">Submit</span></button>
+                    </form>
+                  </div>
+                </div>
+              </section>
+            </main>
+            <footer class="bg-white dark:bg-background-dark border-t border-neutral/50 dark:border-neutral/20 py-8 px-4">
+              <div class="container mx-auto text-center text-text-light/70 dark:text-text-dark/70">
+                <div class="flex justify-center gap-6 mb-4">
+                  <a class="hover:text-primary" href="#">Facebook</a>
+                  <a class="hover:text-primary" href="#">Twitter</a>
+                  <a class="hover:text-primary" href="#">Instagram</a>
+                </div>
+                <p class="text-sm">© 2023 MindWell. All rights reserved.</p>
+                <a class="text-sm hover:text-primary" href="#">Privacy Policy</a>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

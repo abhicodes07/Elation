@@ -1,0 +1,57 @@
+{% extends 'elationapp/layout.html' %}
+{% load static %}
+{% block title %}
+  Elation - Business
+{% endblock %}
+
+{% block content %}
+  <section class="md:h-[100vh] h-[30rem] w-full flex flex-col justify-center bg-cover bg-center md:px-30 px-15" style="background-image: url({% static 'assets/frame_93.jpg' %})">
+    <div class="container md:max-w-3xl grid grid-cols-1 gap-4 text-center sm:text-left">
+      <h1 class="poppins-medium text-xl sm:text-3xl md:text-5xl text-white">Transform your organization with modern mental health support.</h1>
+      <p class="text-white/70 text-sm md:text-base">Empower your organization with comprehensive mental health support that enhances employee well-being and productivity. Foster a healthier, more engaged workforce with expert care and personalized solutions.</p>
+    </div>
+  </section>
+  <div class="pt-5">
+      {% include "elationapp/components/slider.html" %}
+  </div>
+  <div class="flex justify-center">
+    <div class="flex flex-col max-w-[1200px] flex-1">
+      <section class="py-20 px-4" id="services">
+        <div class="container mx-auto">
+          <div class="flex flex-col gap-12">
+            <div class="text-center">
+              <h2 class="text-3xl poppins-medium leading-tight tracking-[-0.015em] text-navy-light dark:text-navy-dark">Our Services</h2>
+              <p class="text-base font-normal leading-normal text-text-light/70 dark:text-text-dark/70 max-w-2xl mx-auto mt-2">We offer a range of services to meet your individual needs. Our team of experienced therapists is dedicated to providing compassionate and effective care.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div class="flex flex-col gap-4 rounded-xl border border-neutral/50 dark:border-neutral/20 bg-white dark:bg-background-dark p-6 text-center items-center hover:shadow-lg transition-shadow">
+                <span class="material-symbols-outlined text-[#A2D2FF] text-4xl">person</span>
+                <h3 class="text-lg font-bold leading-tight">Individual Therapy</h3>
+                <p class="text-sm font-normal leading-normal text-text-light/70 dark:text-text-dark/70">Personalized one-on-one sessions to address your unique challenges and goals.</p>
+                <a class="text-accent font-semibold text-sm mt-2" href="#">Learn More</a>
+              </div>
+              <div class="flex flex-col gap-4 rounded-xl border border-neutral/50 dark:border-neutral/20 bg-white dark:bg-background-dark p-6 text-center items-center hover:shadow-lg transition-shadow">
+                <span class="material-symbols-outlined text-[#A2D2FF] text-4xl">favorite</span>
+                <h3 class="text-lg font-bold leading-tight">Couples Counseling</h3>
+                <p class="text-sm font-normal leading-normal text-text-light/70 dark:text-text-dark/70">Strengthen your relationship and improve communication with our expert guidance.</p>
+                <a class="text-accent font-semibold text-sm mt-2" href="#">Learn More</a>
+              </div>
+              <div class="flex flex-col gap-4 rounded-xl border border-neutral/50 dark:border-neutral/20 bg-white dark:bg-background-dark p-6 text-center items-center hover:shadow-lg transition-shadow">
+                <span class="material-symbols-outlined text-[#A2D2FF] text-4xl">groups</span>
+                <h3 class="text-lg font-bold leading-tight">Family Therapy</h3>
+                <p class="text-sm font-normal leading-normal text-text-light/70 dark:text-text-dark/70">Navigate family dynamics and build healthier connections with your loved ones.</p>
+                <a class="text-accent font-semibold text-sm mt-2" href="#">Learn More</a>
+              </div>
+              <div class="flex flex-col gap-4 rounded-xl border border-neutral/50 dark:border-neutral/20 bg-white dark:bg-background-dark p-6 text-center items-center hover:shadow-lg transition-shadow">
+                <span class="material-symbols-outlined text-[#A2D2FF] text-4xl">diversity_3</span>
+                <h3 class="text-lg font-bold leading-tight">Group Sessions</h3>
+                <p class="text-sm font-normal leading-normal text-text-light/70 dark:text-text-dark/70">Find support and community in a safe and structured group setting.</p>
+                <a class="text-accent font-semibold text-sm mt-2" href="#">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+{% endblock %}
