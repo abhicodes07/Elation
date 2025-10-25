@@ -12,7 +12,7 @@
     </div>
   </section>
   <div class="pt-5">
-      {% include "elationapp/components/slider.html" %}
+    {% include 'elationapp/components/slider.html' %}
   </div>
   <div class="flex justify-center">
     <div class="flex flex-col max-w-[1200px] flex-1">
@@ -52,6 +52,9 @@
           </div>
         </div>
       </section>
+      {% include 'elationapp/components/accordion.html' %}
+      {% include 'elationapp/components/help_banner.html' %}
     </div>
   </div>
+  {% include 'elationapp/components/footer.html' %}
 {% endblock %}

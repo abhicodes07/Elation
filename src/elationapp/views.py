@@ -222,11 +222,11 @@ def advice_room(request, *args, **kwargs):
     return render(request, "elationapp/advice_room.html", context=context)
 
 def business(request, *args, **kwargs):
-    return render(request, "elationapp/code.html")
-
-def test(request, *args, **kwargs):
     companies = ["wpa", "bsc", "bacp", "efpa", "aca", "apa", "icf", "nhs", "dha"]
     context = {
         "company_logos": companies,
     }
-    return render(request, "elationapp/test.html", context=context)
+    return render(request, "elationapp/business.html", context=context)
+
+def test(request, *args, **kwargs):
+    return render(request, "elationapp/code.html")
